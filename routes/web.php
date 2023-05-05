@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-//client
+//qwert
+//client azamat + shoxrux = love
 
 Route::get('/', function () {
     return view('index');
