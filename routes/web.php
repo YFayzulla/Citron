@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 //qwert
 //client azamat + shoxrux = love
 
+
+//salom
 Route::get('/', function () {
     return view('index');
 })->name('index');
