@@ -59,7 +59,7 @@
                     <a href="{{route('about')}}" class="nav-item nav-link @if(request()->routeIs('about')) active @endif">{{__('index.about')}}</a>
                     <a href="{{route('service')}}" class="nav-item nav-link @if(request()->routeIs('service')) active @endif">{{__("index.service")}}</a>
                     <a href="{{route('project')}}" class="nav-item nav-link @if(request()->routeIs('project')) active @endif">{{__('index.project')}}</a>
-                    <a href="{{route('testimonial')}}" class="nav-item nav-link @if(request()->routeIs('testimonial')) active @endif">{{__("index.gal")}}</a>
+                    <a href="{{route('gallery')}}" class="nav-item nav-link @if(request()->routeIs('gallery')) active @endif">{{__("index.gal")}}</a>
 
                     <a href="{{route('contact')}}" class="nav-item nav-link @if(request()->routeIs('contact')) active @endif">{{__('index.contact')}}</a>
                                     </div>

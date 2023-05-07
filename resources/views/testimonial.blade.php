@@ -25,6 +25,22 @@
             <div class="container py-5 px-lg-5">
                 <p class="section-title text-secondary justify-content-center"><span></span>{{__("index.gal")}}<span></span></p>
                 <h1 class="text-center mb-5">{{__("index.photos")}}!</h1>
+
+                @foreach($galleries as $gallery)
+                    <div class="team-item bg-light rounded"  style="width: 370px; height: 500px">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="Aphoto/" width="350px" HEIGHT="300PX"  alt="">
+                            <h5></h5>
+                        </div>
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                @endforeach
+
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-light rounded my-4">
                         <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
@@ -60,7 +76,7 @@
             </div>
         </div>
         <!-- Testimonial End -->
-        
+
 
 
     @endsection

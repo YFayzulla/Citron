@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LocalizationController;
@@ -32,12 +33,12 @@ Route::get('/contact',function (){
 })->name('contact');
 Route::get('/project',[ProjectController::class,"show"])->name('project');
 Route::get('/service',[ServiceController::class,'show'])->name('service');
+Route::get('/galleries',[GalleryController::class, 'show'])->name('gallery');
+
 Route::get('/our team', function () {
     return view('team');
 })->name('team');
-Route::get('/testimonial', function () {
-    return view('testimonial');
-})->name('testimonial');
+
 Route::get('/404 page', function () {
     return view('404');
 })->name('404');
@@ -68,6 +69,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('abouts',AboutController::class);
     Route::resource('projects',ProjectController::class);
     Route::resource('services',ServiceController::class);
+    Route::resource('/gallery',GalleryController::class);
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

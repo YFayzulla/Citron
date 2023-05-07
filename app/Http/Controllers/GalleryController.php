@@ -12,7 +12,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $galleries = Gallery::all();
+        return view('admin.gallery.index', compact('galleries'));
     }
 
     /**
@@ -20,7 +21,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.gallery.create');
     }
 
     /**
@@ -28,15 +29,33 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'desc' => 'required',
+            'image' => 'required'
+        ]);
+        $data= new Gallery();
+        if($request->hasfile('image')){
+//            dd($request);
+            $file= $request->file('image');
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('Aphoto'),$filename);
+            $data['name']=$request->name;
+            $data['desc']=$request->desc;
+            $data['image']=$filename;
+        }
+
+        $data->save();
+        return redirect()->route('gallery.index')->with('success', 'Gallery created');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Gallery $gallery)
+    public function show()
     {
-        //
+        $galleries = Gallery::all();
+        return view('testimonial',compact('galleries'));
     }
 
     /**
@@ -44,7 +63,7 @@ class GalleryController extends Controller
      */
     public function edit(Gallery $gallery)
     {
-        //
+        return view('admin.gallery.edit', compact('gallery'));
     }
 
     /**
@@ -52,7 +71,23 @@ class GalleryController extends Controller
      */
     public function update(Request $request, Gallery $gallery)
     {
-        //
+        $request->validate([
+            'name'=>'required|string',
+            'desc'=>'required',
+            'thumbnail'=>'required'
+        ]);
+
+        if($request->hasfile('thumbnail')){
+            $file= $request->file('thumbnail');
+            $filename = date('YmdHi').$file->getClientOriginalExtension();
+            $file->move(public_path('Aphoto'),$filename);
+            $gallery['name']=$request->name;
+            $gallery['desc']=$request->desc;
+            $gallery['image']=$filename;
+        }
+
+        $gallery->update($request->all());
+        return redirect()->route('gallery.index')->with('success', 'Gallery updated');
     }
 
     /**
@@ -60,6 +95,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        //
+        $gallery->delete();
+        return redirect()->route('gallery.index')->with('success', 'Gallery deleted');
     }
 }
