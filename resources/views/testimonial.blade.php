@@ -29,9 +29,12 @@
                 @foreach($galleries as $gallery)
                     <div class="team-item bg-light rounded"  style="width: 370px; height: 500px">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="Aphoto/" width="350px" HEIGHT="300PX"  alt="">
-                            <h5></h5>
+                            <img class="img-fluid rounded mb-4" src="Aphoto/{{$gallery->image}}" width="350px" height="300px"  alt="">
+                            <h5>{{$gallery->name}}</h5>
                         </div>
+                        <center>
+                        <h2>{{$gallery->desc}}</h2>
+                        </center>
                         <div class="d-flex justify-content-center p-4">
                             <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
