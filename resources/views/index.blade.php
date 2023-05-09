@@ -5,7 +5,7 @@
         <div class="container px-lg-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="text-white mb-4 animated slideInDown ">{{__('index.text')}}</h1>d
+                    <h1 class="text-white mb-4 animated slideInDown ">{{__('index.text')}}</h1>
                     <a href="" class="btn btn-secondary py-sm-3 px-sm-5 m-2 rounded-pill me-3 animated slideInLeft">{{__('index.Read More')}}</a>
                     <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">{{__('index.Contact Us')}}</a>
                 </div>
@@ -333,5 +333,5 @@
             </div>
         </div>
         <!-- Team End -->
-        
+
 @endsection

@@ -29,5 +29,12 @@ return [
     'Terms&Condition'=>'Terms & Condition',
     'Career'=>'Career',
     //Contact
-
+    'Bog’lanish'=>'Contact',
+    'Bosh_sahifa'=>'Head page',
+    'Biz_bilan_bog’lanish'=>'Contact Us',
+    'Har_qanday_so’rov_uchun_murojaat_qiling'=>'For any query please contact',
+    'Toliq_ismingiz'=>'Full name',
+    'Email'=>'Email',
+    'Xabar'=>'Massage',
+    'Xabarni_yuborish'=>'Send',
 ];
