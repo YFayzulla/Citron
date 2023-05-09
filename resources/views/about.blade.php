@@ -6,13 +6,13 @@
         <div class="container my-5 py-5 px-lg-5">
             <div class="row g-5 py-5">
                 <div class="col-12 text-center">
-                    <h1 class="text-white animated slideInDown">Biz haqimizda</h1>
+                    <h1 class="text-white animated slideInDown">{{__('index.Biz haqimizda')}}</h1>
                     <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Asosiy</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Saxifalar</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Malumotlar</li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">{{__('index.Asosiy')}}</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">{{__('index.Saxifalar')}}</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">{{__('index.Malumotlar')}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -106,35 +106,35 @@
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                         <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
                         <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
-                        <p class="text-white mb-0">Yillki tajriba</p>
+                        <p class="text-white mb-0">{{__('index.Yillki tajriba')}}</p>
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                         <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
                         <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
-                        <p class="text-white mb-0">Jamo`a a`zolarimiz</p>
+                        <p class="text-white mb-0">{{__('index.Jamo`a a`zolarimiz')}}</p>
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                         <i class="fa fa-users fa-3x text-secondary mb-3"></i>
                         <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
-                        <p class="text-white mb-0">Homiylar</p>
+                        <p class="text-white mb-0">{{__('index.Homiylar')}}</p>
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                         <i class="fa fa-check fa-3x text-secondary mb-3"></i>
                         <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
-                        <p class="text-white mb-0">Tugallangan loyihalar</p>
+                        <p class="text-white mb-0">{{__('index.Tugallangan loyihalar')}}</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Facts End -->
-        
+
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Bizning Jamoa<span></span></p>
-                    <h1 class="text-center mb-5">Bizning A`zolar</h1>
+                    <p class="section-title text-secondary justify-content-center"><span></span>{{__('index.Bizning Jamoa')}}<span></span></p>
+                    <h1 class="text-center mb-5">{{__('index.Bizning A`zolar')}}</h1>
                 </div>
 
                 <div class="row g-4">

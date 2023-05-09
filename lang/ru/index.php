@@ -1,9 +1,9 @@
 <?php
 return[
-    'Language'=>'Til',
-    'Inglis_tili'=>'Ingliz tili',
-    'Rus_tili'=>'Rus tili',
-    'Uzbek_tili'=>'Uzbek tili',
+    'Language'=>'Язык',
+    'Inglis_tili'=>'Английский',
+    'Rus_tili'=>'Русский',
+    'Uzbek_tili'=>'Узбекский',
     //Navbar
   'home'=>'главный',
   'service'=>'сервисы',
@@ -36,4 +36,28 @@ return[
     'Email'=>'Email',
     'Xabar'=>'Сообщение',
     'Xabarni_yuborish'=>'Отправить',
+    //Project
+    'Project'=>'Проект',
+    'Home'=>'Дом',
+    'Pages'=>'Страницы',
+    'Our_Projects'=>'Наши проекты',
+    'Completed_Project'=>'Завершенные проекты',
+    //service
+    'Hizmatlar'=>'Услуги',
+    'Asosiy_sahifa'=>'Дом',
+    'Saxifalar'=>'Страницы',
+    'Hizmatlar'=>'Услуги',
+    'Bizning_xizmatlar'=>'Наши сервисы',
+    'Qanday_yechimlarni_taqdim_etamiz'=>'Какие решения мы предлагаем',
+    //About
+    'Biz haqimizda'=>'О нас',
+    'Asosiy'=>'Главная',
+    'Saxifalar'=>'Страницы',
+    'Malumotlar'=>'Данные',
+    'Yillki tajriba'=>'Многолетний опыт',
+    'Jamo`a a`zolarimiz'=>'Члены нашей команды',
+    'Homiylar'=>'Спонсоры',
+    'Tugallangan loyihalar'=>'Завершенные проекты',
+    'Bizning Jamoa'=>'Наша каманда',
+    'Bizning A`zolar'=>'Наши участники',
 ];

@@ -4,13 +4,13 @@
         <div class="container my-5 py-5 px-lg-5">
             <div class="row g-5 py-5">
                 <div class="col-12 text-center">
-                    <h1 class="text-white animated slideInDown">Hizmatlar</h1>
+                    <h1 class="text-white animated slideInDown">{{__('index.Hizmatlar')}}</h1>
                     <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Asosiy Sahifa</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Saxifalar</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Hizmatlar</li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">{{__('index.Asosiy_sahifa')}}</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">{{__('index.Saxifalar')}}</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">{{__('index.Hizmatlar')}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -22,8 +22,8 @@
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Bizning Xizmatlar<span></span></p>
-                    <h1 class="text-center mb-5">Qanday yechimlarni taqdim etamiz</h1>
+                    <p class="section-title text-secondary justify-content-center"><span></span>{{__('index.Bizning_xizmatlar')}}<span></span></p>
+                    <h1 class="text-center mb-5">{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</h1>
                 </div>
                 <div class="row g-4">
                     @foreach($service as $s)

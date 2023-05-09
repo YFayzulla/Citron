@@ -37,4 +37,28 @@ return [
     'Email'=>'Email',
     'Xabar'=>'Massage',
     'Xabarni_yuborish'=>'Send',
+    //Project
+    'Project'=>'Project',
+    'Home'=>'Home',
+    'Pages'=>'Pages',
+    'Our_Projects'=>'Our Projects',
+    'Completed_Project'=>'Completed Project',
+    //service
+    'Hizmatlar'=>'Service',
+    'Asosiy_sahifa'=>'Home',
+    'Saxifalar'=>'Pages',
+    'Hizmatlar'=>'Service',
+    'Bizning_xizmatlar'=>'Our Services',
+    'Qanday_yechimlarni_taqdim_etamiz'=>'What solutions we provide',
+    //About
+    'Biz haqimizda'=>'About us',
+    'Asosiy'=>'Home',
+    'Saxifalar'=>'Pages',
+    'Malumotlar'=>'Reference',
+    'Yillki tajriba'=>'Years of experience',
+    'Jamo`a a`zolarimiz'=>'Our team members',
+    'Homiylar'=>'Sponsors',
+    'Tugallangan loyihalar'=>'Completed Project',
+    'Bizning Jamoa'=>'Our team',
+    'Bizning A`zolar'=>'Our members',
 ];
