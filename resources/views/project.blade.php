@@ -38,8 +38,8 @@
                                 </div>
                             </div>
                             <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">{{$project->name_uz}}</p>
-                                <h5 class="lh-base mb-0">{{$project->desc_uz}}</h5>
+                                <p class="text-primary fw-medium mb-2">{{($project->{'name_'.app()->getLocale()})}}</p>
+                                <h5 class="lh-base mb-0">{{($project->{'desc_'.app()->getLocale()})}}</h5>
                             </div>
                         </div>
                     </div>

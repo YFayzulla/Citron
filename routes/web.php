@@ -3,6 +3,7 @@
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -22,19 +23,13 @@ use Illuminate\Support\Facades\Route;
 
 //success
 //qwert
-//client azamat + shoxrux = love
+//client fayzulla + shoxrux = love
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [IndexController::class,'index'])->name('index');
 Route::get('/about', [AboutController::class,'show'])->name('about');
 Route::get('/contact',function (){
     return view('contact');
 })->name('contact');
-Route::get('/project',[ProjectController::class,"show"])->name('project');
-Route::get('/service',[ServiceController::class,'show'])->name('service');
-Route::get('/galleries',[GalleryController::class, 'show'])->name('gallery');
-
 Route::get('/our team', function () {
     return view('team');
 })->name('team');
@@ -43,6 +38,9 @@ Route::get('/404 page', function () {
     return view('404');
 })->name('404');
 
+Route::get('/project',[ProjectController::class,"show"])->name('project');
+Route::get('/service',[ServiceController::class,'show'])->name('service');
+Route::get('/galleries',[GalleryController::class, 'show'])->name('gallery');
 
 //lang
 

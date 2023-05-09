@@ -190,7 +190,7 @@
                 </li>
 
 
-                <li class="menu-item @if(request()->routeIs('contacts.index'))  active  @endif">
+                <li class="menu-item @if(request()->routeIs('gallery.index'))  active  @endif">
                     <a href="{{route('gallery.index')}}" class="menu-link ">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Analytics">Gallery /</div>

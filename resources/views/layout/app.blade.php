@@ -64,11 +64,11 @@
                     <a href="{{route('contact')}}" class="nav-item nav-link @if(request()->routeIs('contact')) active @endif">{{__('index.contact')}}</a>
                                     </div>
                 <div class="dropdown btn rounded-pill py-1 px-1  d-lg-block">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">til tanlash</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{__('index.Language')}}</a>
                     <div class="dropdown-menu m-0">
-                        <a href="locale/en" class="dropdown-item">Inglistili</a>
-                        <a href="locale/ru" class="dropdown-item">Rus tili</a>
-                        <a href="locale/uz" class="dropdown-item">Uzbek tili</a>
+                        <a href="locale/en" class="dropdown-item">{{__('index.Inglis_tili')}}</a>
+                        <a href="locale/ru" class="dropdown-item">{{__('index.Rus_tili')}}</a>
+                        <a href="locale/uz" class="dropdown-item">{{__('index.Uzbek_tili')}}</a>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
 
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                    <p class="section-title text-white h5 mb-4">{{__('index.Address')}}<span></span></p>
 {{--               /     <p><i class="fa fa-map-marker-alt me-3"></i>{{auth()->user()->address}}</p>--}}
 {{--                    <p><i class="fa fa-phone-alt me-3"></i>{{auth()->user()->tel}}</p>--}}
 {{--                    <p><i class="fa fa-envelope me-3"></i>{{auth()->user()->email}}</p>--}}
@@ -99,15 +99,15 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Career</a>
+                    <p class="section-title text-white h5 mb-4">{{__('index.Quick_Link')}}<span></span></p>
+                    <a class="btn btn-link" href="">{{__('index.About_Us')}}</a>
+                    <a class="btn btn-link" href="">{{__('index.Contact_Us')}}</a>
+                    <a class="btn btn-link" href="">{{__('index.Privacy_Policy')}}</a>
+                    <a class="btn btn-link" href="">{{__('index.Terms&Condition')}}</a>
+                    <a class="btn btn-link" href="">{{__('index.Career')}}</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                    <p class="section-title text-white h5 mb-4">{{__('index.gal')}}<span></span></p>
                     <div class="row g-2">
                         <div class="col-4">
                             <img class="img-fluid" src="asset/img/portfolio-1.jpg" alt="Image">
