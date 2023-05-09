@@ -145,7 +145,7 @@
                             <div class="text-center border-bottom p-4">
                                 <img class="img-fluid rounded-circle mb-4" src="Aphoto/{{$about->image}}" width="350px" HEIGHT="300PX"  alt="">
                                 <h5>{{$about->name}}</h5>
-                                <span>{{$about->specialty_uz}}</span>
+                                <span>{{($about->{'specialty_'.app()->getLocale()})}}</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -160,5 +160,4 @@
             </div>
         </div>
         <!-- Team End -->
-
 @endsection

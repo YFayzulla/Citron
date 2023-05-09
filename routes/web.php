@@ -3,6 +3,7 @@
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -24,9 +25,7 @@ use Illuminate\Support\Facades\Route;
 //qwert
 //client azamat + shoxrux = love
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [IndexController::class,'index'])->name('index');
 Route::get('/about', [AboutController::class,'show'])->name('about');
 Route::get('/contact',function (){
     return view('contact');
