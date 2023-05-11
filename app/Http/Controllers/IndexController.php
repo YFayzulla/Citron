@@ -13,6 +13,7 @@ class IndexController extends Controller
     public function index(){
         $abouts = About::all();
         $projects = Project::all();
-        return view('index', compact('abouts', 'projects'));
+        $service = Service::all();
+        return view('index', compact('abouts', 'projects', 'service'));
     }
 }

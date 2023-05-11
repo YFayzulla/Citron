@@ -127,70 +127,39 @@
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+                    <p class="section-title text-secondary justify-content-center"><span></span>{{__('index.Our Services')}}<span></span></p>
+                    <h1 class="text-center mb-5">{{__('index.What Solutions We Provide')}}</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
+                    @foreach($service as $s)
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <img src="Aphoto/{{$s->image}}" width="550px" height="200px" alt="">
+                                </div>
+                                <h5 class="mb-3">{{($s->{'name_'.app()->getLocale()})}}</h5>
+                                <p class="m-0">{{($s->{'desc_'.app()->getLocale()})}}</p>
+                                <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            @endforeach
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
+                        @foreach($service as $project)
+                            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <img class="img-fluid w-100" src="Aphoto/{{$project->image}}" width="100px" alt="">
+                                        <div class="portfolio-overlay">
+                                            <a class="btn btn-square btn-outline-light mx-1" href="#" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-square btn-outline-light mx-1" href="#"><i class="fa fa-link"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-light p-4">
+                                        <p class="text-primary fw-medium mb-2">{{($project->{'name_'.app()->getLocale()})}}</p>
+                                        <h5 class="lh-base mb-0">{{($project->{'desc_'.app()->getLocale()})}}</h5>
+                                    </div>
+                                </div>
                             </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-mail-bulk fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Email Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-thumbs-up fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">PPC Advertising</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                        @endforeach
                 </div>
             </div>
         </div>
@@ -201,24 +170,27 @@
                     <p class="section-title text-secondary justify-content-center"><span></span>{{__('index.Our Projects')}}<span></span></p>
                     <h1 class="text-center mb-5">{{__('index.Recently Completed Projects')}}</h1>
                 </div>
-
-                @foreach($projects as $project)
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="Aphoto/{{$project->image}}" width="100px" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="#" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="#"><i class="fa fa-link"></i></a>
+                <div class="row g-4">
+                    @foreach($projects as $project)
+                        <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="rounded overflow-hidden">
+                                <div class="position-relative overflow-hidden">
+                                    <img class="img-fluid w-100" src="Aphoto/{{$project->image}}" width="100px" alt="">
+                                    <div class="portfolio-overlay">
+                                        <a class="btn btn-square btn-outline-light mx-1" href="#"
+                                           data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                        <a class="btn btn-square btn-outline-light mx-1" href="#"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4">
+                                    <p class="text-primary fw-medium mb-2">{{($project->{'name_'.app()->getLocale()})}}</p>
+                                    <h5 class="lh-base mb-0">{{($project->{'desc_'.app()->getLocale()})}}</h5>
                                 </div>
                             </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">{{($project->{'name_'.app()->getLocale()})}}</p>
-                                <h5 class="lh-base mb-0">{{($project->{'desc_'.app()->getLocale()})}}</h5>
-                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
         <!-- Team Start -->

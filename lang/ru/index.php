@@ -62,5 +62,7 @@ return[
     'Bizning A`zolar'=>'Наши участники',
     //Home
     'Our Projects'=>'Наши проеты',
-    'Recently Completed Projects'=>'Недавно завершенные проекты'
+    'Recently Completed Projects'=>'Недавно завершенные проекты',
+    'What Solutions We Provide'=>'Какие решения мы предлагаем',
+    'Our Services'=>'Наши услуги',
 ];
