@@ -13,10 +13,10 @@ return[
     'gal'=>'галерея',
     //home
     'text'=>'Цитрон умных и творческих людей',
-    'Read More'=>'информация',
+    'Read More'=>'Информация',
     'Contact Us'=>'Обратитесь к нам',
     //Gallery
-    'photos'=>'Изображентя',
+    'photos'=>'Изображения',
     'Pages'=>'Страницы',
     'Testimonial'=>'Рекомендация',
     //Footer
@@ -60,4 +60,7 @@ return[
     'Tugallangan loyihalar'=>'Завершенные проекты',
     'Bizning Jamoa'=>'Наша каманда',
     'Bizning A`zolar'=>'Наши участники',
+    //Home
+    'Our Projects'=>'Наши проеты',
+    'Recently Completed Projects'=>'Недавно завершенные проекты'
 ];

@@ -61,4 +61,7 @@ return [
     'Tugallangan loyihalar'=>'Completed Project',
     'Bizning Jamoa'=>'Our team',
     'Bizning A`zolar'=>'Our members',
+    //Home
+    'Our Projects'=>'Our projects',
+    'Recently Completed Projects'=>'Recently Completed Projects'
 ];

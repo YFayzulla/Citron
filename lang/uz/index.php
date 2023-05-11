@@ -60,4 +60,7 @@ return[
     'Tugallangan loyihalar'=>'Tugallangan loyihalar',
     'Bizning Jamoa'=>'Bizning Jamoa',
     'Bizning A`zolar'=>'Bizning A`zolar',
+    //Home
+    'Our Projects'=>'Bizning loyihalarimiz',
+    'Recently Completed Projects'=>'Yaqinda tugallangan loyihalar',
 ];
