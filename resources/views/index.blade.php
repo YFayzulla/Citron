@@ -132,34 +132,16 @@
                 </div>
                 <div class="row g-4">
                     @foreach($service as $s)
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <img src="Aphoto/{{$s->image}}" width="550px" height="200px" alt="">
-                                </div>
-                                <h5 class="mb-3">{{($s->{'name_'.app()->getLocale()})}}</h5>
-                                <p class="m-0">{{($s->{'desc_'.app()->getLocale()})}}</p>
-                                <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                            @endforeach
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="Aphoto/{{$s->image}}"  height="180px" width="180px" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">{{($s->{'name_'.app()->getLocale()})}}</h5>
+                                <p class="card-text">{{($s->{'desc_'.app()->getLocale()})}}</p>
+                                <center>
+{{--                                <a href="#" class="btn btn-primary">more</a>--}}
+                                </center>
                         </div>
-                        @foreach($service as $project)
-                            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <img class="img-fluid w-100" src="Aphoto/{{$project->image}}" width="100px" alt="">
-                                        <div class="portfolio-overlay">
-                                            <a class="btn btn-square btn-outline-light mx-1" href="#" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-square btn-outline-light mx-1" href="#"><i class="fa fa-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="bg-light p-4">
-                                        <p class="text-primary fw-medium mb-2">{{($project->{'name_'.app()->getLocale()})}}</p>
-                                        <h5 class="lh-base mb-0">{{($project->{'desc_'.app()->getLocale()})}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
