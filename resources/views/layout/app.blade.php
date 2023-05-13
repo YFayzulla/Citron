@@ -64,7 +64,7 @@
                     <a href="{{route('contact')}}" class="nav-item nav-link @if(request()->routeIs('contact')) active @endif">{{__('index.contact')}}</a>
                                     </div>
                 <div class="dropdown btn rounded-pill py-1 px-1  d-lg-block">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{__('index.Language')}}</a>
+                    <a href="#" class="nav-link" style data-bs-toggle="dropdown">{{__('index.Language')}}</a>
                     <div class="dropdown-menu m-0">
                         <a href="locale/en" class="dropdown-item">{{__('index.Inglis_tili')}}</a>
                         <a href="locale/ru" class="dropdown-item">{{__('index.Rus_tili')}}</a>

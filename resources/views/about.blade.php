@@ -138,12 +138,14 @@
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        @foreach($abouts as $about)
+                    @foreach($abouts as $about)
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp"  data-wow-delay="0.1s">
 
                         <div class="team-item bg-light rounded"  style="width: 370px; height: 500px">
+
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="Aphoto/{{$about->image}}" width="350px" HEIGHT="300PX"  alt="">
+                                <img class="img-fluid mb-4" src="Aphoto/{{$about->image}}" width="100" HEIGHT="100px"  alt="">
                                 <h5>{{$about->name}}</h5>
                                 <span>{{($about->{'specialty_'.app()->getLocale()})}}</span>
                             </div>
@@ -153,9 +155,11 @@
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
+
                         </div>
-                    @endforeach
                     </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
