@@ -35,7 +35,7 @@ return [
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'For any query please contact',
     'Toliq_ismingiz'=>'Full name',
     'Email'=>'Email',
-    'Xabar'=>'Massage',
+    'Xabar'=>'Message',
     'Xabarni_yuborish'=>'Send',
     //Project
     'Project'=>'Project',
