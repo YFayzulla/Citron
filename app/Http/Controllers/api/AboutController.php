@@ -15,7 +15,7 @@ class AboutController extends Controller
         if ($abouts->count() > 0) {
             return response()->json([
                 'status' => 200,
-                'abouts' => $abouts
+                'Abouts' => $abouts
             ], 200);
         } else {
             return response()->json([
@@ -29,11 +29,11 @@ class AboutController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191',
-            'speciality_uz' => 'required|string|max:191',
-            'speciality_ru' => 'required|string|max:191',
-            'speciality_en' => 'required|string|max:191',
+            'specialty_uz' => 'required|string|max:191',
+            'specialty_ru' => 'required|string|max:191',
+            'specialty_en' => 'required|string|max:191',
             'email' => 'required|email|max:191',
-            'image' => 'required|image|size:1024',
+            'image' => 'required|image|size:1024'
         ]);
 
         if ($validator->fails()) {
@@ -45,11 +45,12 @@ class AboutController extends Controller
         }else {
             $about = About::create([
                 'name' => $request->name,
-                'speciality_uz' => $request->speciality_uz,
-                'speciality_ru' => $request->speciality_ru,
-                'speciality_en' => $request->speciality_en,
+                'specialty_uz' => $request->specialty,
+                'specialty_ru' => $request->specialty_ru,
+                'specialty_en' => $request->specialty_en,
                 'email' => $request->email,
                 'image' => $request->image
+
             ]);
 
             if ($about) {
@@ -75,7 +76,7 @@ class AboutController extends Controller
 
             return response()->json([
                 'status' => 200,
-                'about' => $about
+                'About' => $about
             ], 200);
         }else {
 
@@ -93,7 +94,7 @@ class AboutController extends Controller
 
             return response()->json([
                 'status' => 200,
-                'about' => $about
+                'About' => $about
             ], 200);
         }else {
 
@@ -108,11 +109,11 @@ class AboutController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191',
-            'speciality_uz' => 'required|string|max:191',
-            'speciality_ru' => 'required|string|max:191',
-            'speciality_en' => 'required|string|max:191',
+            'specialty_uz' => 'required|string|max:191',
+            'specialty_ru' => 'required|string|max:191',
+            'specialty_en' => 'required|string|max:191',
             'email' => 'required|email|max:191',
-            'image' => 'required|image|size:1024',
+            'image' => 'required|image|size:1024'
         ]);
 
         if ($validator->fails()) {
@@ -127,11 +128,12 @@ class AboutController extends Controller
             if ($about) {
                 $about->update([
                     'name' => $request->name,
-                    'speciality_uz' => $request->speciality_uz,
-                    'speciality_ru' => $request->speciality_ru,
-                    'speciality_en' => $request->speciality_en,
+                    'specialty_uz' => $request->specialty,
+                    'specialty_ru' => $request->specialty_ru,
+                    'specialty_en' => $request->specialty_en,
                     'email' => $request->email,
                     'image' => $request->image
+
                 ]);
 
                 return response()->json([
@@ -153,7 +155,7 @@ class AboutController extends Controller
         $about = About::find($id);
         if ($about) {
 
-           $about->delete();
+            $about->delete();
             return response()->json([
                 'status' => 200,
                 'message' => "About Deleted Successfully"
@@ -166,5 +168,5 @@ class AboutController extends Controller
             ], 404);
         }
     }
-}
 
+}

@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $projects = Project::all();
@@ -24,6 +28,9 @@ class ProjectController extends Controller
         }
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -34,8 +41,6 @@ class ProjectController extends Controller
             'desc_ru' => 'required|string|max:191',
             'desc_en' => 'required|string|max:191',
             'image' => 'required|image|size:1024',
-            'partner' => 'required|string|max:191',
-            'status' => ''
         ]);
 
         if ($validator->fails()) {
@@ -73,8 +78,12 @@ class ProjectController extends Controller
         }
     }
 
+    /**
+     * Display the specified resource.
+     */
     public function show($id)
     {
+
         $project = Project::find($id);
         if ($project) {
 
@@ -109,6 +118,9 @@ class ProjectController extends Controller
         }
     }
 
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(Request $request, int $id)
     {
         $validator = Validator::make($request->all(), [
@@ -119,8 +131,6 @@ class ProjectController extends Controller
             'desc_ru' => 'required|string|max:191',
             'desc_en' => 'required|string|max:191',
             'image' => 'required|image|size:1024',
-            'partner' => 'required|string|max:191',
-            'status' => ''
         ]);
 
         if ($validator->fails()) {
@@ -159,6 +169,9 @@ class ProjectController extends Controller
         }
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy($id)
     {
         $project = Project::find($id);
@@ -177,4 +190,5 @@ class ProjectController extends Controller
             ], 404);
         }
     }
+
 }
