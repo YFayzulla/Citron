@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="asset/img/favicon.ico" rel="icon">
+    <link href="{{asset('asset/img/favicon.ico')}}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="asset/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="asset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="asset/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="{{asset('asset/lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('asset/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('asset/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
                 <h1 class="m-0">CiTroN</h1>
-{{--                      <img src="asset/img/logo.png" alt="Logo">--}}
+{{--                      <img src="{{asset('asset/img')}}/logo.png" alt="Logo">--}}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -110,22 +110,22 @@
                     <p class="section-title text-white h5 mb-4">{{__('index.gal')}}<span></span></p>
                     <div class="row g-2">
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-1.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-1.jpg')}}" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-2.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-2.jpg')}}" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-3.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-3.jpg')}}" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-4.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-4.jpg')}}" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-5.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-5.jpg')}}" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid" src="asset/img/portfolio-6.jpg" alt="Image">
+                            <img class="img-fluid" src="{{asset('asset/img/portfolio-6.jpg')}}" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -152,16 +152,16 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="asset/img/wow/wow.min.js"></script>
-<script src="asset/img/easing/easing.min.js"></script>
-<script src="asset/img/waypoints/waypoints.min.js"></script>
-<script src="asset/img/counterup/counterup.min.js"></script>
-<script src="asset/img/owlcarousel/owl.carousel.min.js"></script>
-<script src="asset/img/isotope/isotope.pkgd.min.js"></script>
-<script src="asset/img/lightbox/js/lightbox.min.js"></script>
+<script src="{{asset('asset/img/wow/wow.min.js')}}"></script>
+<script src="{{asset('asset/img/easing/easing.min.js')}}"></script>
+<script src="{{asset('asset/img/waypoints/waypoints.min.js')}}"></script>
+<script src="{{asset('asset/img/counterup/counterup.min.js')}}"></script>
+<script src="{{asset('asset/img/owlcarousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('asset/img/isotope/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('asset/img/lightbox/js/lightbox.min.js')}}"></script>
 
 <!-- Template Javascript -->
-<script src="asset/js/main.js"></script>
+<script src="{{asset('asset/js/main.js')}}"></script>
 </body>
 
 </html>

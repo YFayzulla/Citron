@@ -10,12 +10,12 @@
                     <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">{{__('index.Contact Us')}}</a>
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
-                    <img class="img-fluid animated zoomIn border" src="/Aphoto/checking-current-laptop-circuit-board-1.jpg" alt="rasm">
+                    <img class="img-fluid animated zoomIn border" src="/Aphoto/checking-current-laptop-circuit-board-1.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 
         <!-- Feature Start -->
         <div class="container-xxl py-5">
