@@ -25,6 +25,9 @@ use Illuminate\Support\Facades\Route;
 //qwert
 //client fayzulla + shoxrux = love
 
+Route::get('/qwerty', function (){
+    return view('dashboard');
+});
 Route::get('/', [IndexController::class,'index'])->name('index');
 Route::get('/about', [AboutController::class,'show'])->name('about');
 Route::get('/contact',function (){
@@ -51,7 +54,7 @@ Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
 
 
 //actions
-Route::resource('contacts',ContactController::class );
+Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
 
 //admin panel
 
@@ -64,6 +67,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     //resource
+    Route::resource('contacts',ContactController::class );
     Route::resource('abouts',AboutController::class);
     Route::resource('projects',ProjectController::class);
     Route::resource('services',ServiceController::class);

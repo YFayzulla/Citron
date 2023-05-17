@@ -34,6 +34,7 @@ return[
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'Har qanday so’rov uchun murojaat qiling',
     'Toliq_ismingiz'=>'Toliq ismingiz',
     'Email'=>'Email',
+    'Mavzu'=>'Mavzu',
     'Xabar'=>'Xabar',
     'Xabarni_yuborish'=>'Yuborish',
     //Project

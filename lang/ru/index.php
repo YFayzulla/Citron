@@ -33,7 +33,8 @@ return[
     'Biz_bilan_bog’lanish'=>'Обратитесь к нам',
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'Для любого запроса пожалуйста обратитесь',
     'Toliq_ismingiz'=>'Полное имя',
-    'Email'=>'Email',
+    'Email'=>'емаил почта',
+    'Mavzu'=>'тема',
     'Xabar'=>'Сообщение',
     'Xabarni_yuborish'=>'Отправить',
     //Project
