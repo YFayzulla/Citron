@@ -21,40 +21,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//success
-//qwert
-//client fayzulla + shoxrux = love
+//client`s page
 
-Route::get('/qwerty', function (){
-    return view('dashboard');
+Route::get('/',function (){
+    return view('layout.app');
 });
-Route::get('/', [IndexController::class,'index'])->name('index');
-Route::get('/about', [AboutController::class,'show'])->name('about');
-Route::get('/contact',function (){
-    return view('contact');
-})->name('contact');
-Route::get('/our team', function () {
-    return view('team');
-})->name('team');
 
-Route::get('/404 page', function () {
-    return view('404');
-})->name('404');
 
-Route::get('/project',[ProjectController::class,"show"])->name('project');
-Route::get('/service',[ServiceController::class,'show'])->name('service');
-Route::get('/galleries',[GalleryController::class, 'show'])->name('gallery');
+
+
 
 //lang
 
-Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
-
-//Route::resource('contacts',ContactController::class );
-
-
-
 //actions
-Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
 
 //admin panel
 
@@ -77,6 +56,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
+//Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
+
 });
 
 require __DIR__.'/auth.php';
