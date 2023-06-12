@@ -77,7 +77,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="index.html" class="app-brand-link">
+                <a href="#" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                     width="25"
@@ -126,7 +126,7 @@
                             transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
                         >
                           <use fill="#696cff" xlink:href="#path-5"></use>
-                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#"></use>
                         </g>
                       </g>
                     </g>
@@ -160,7 +160,7 @@
                 <li class="menu-item @if(request()->routeIs('abouts.index'))  active  @endif">
                     <a href="{{route('abouts.index')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">Jamoa Azolari /</div>
+                        <div data-i18n="Analytics">Jamoa Azolari</div>
                     </a>
                 </li>
 
@@ -169,7 +169,7 @@
                 <li class="menu-item @if(request()->routeIs('projects.index'))  active  @endif">
                     <a href="{{route('projects.index')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">Loyihalar /</div>
+                        <div data-i18n="Analytics">Loyihalar</div>
                     </a>
                 </li>
 
@@ -177,7 +177,7 @@
                 <li class="menu-item @if(request()->routeIs('services.index'))  active  @endif">
                     <a href="{{route('services.index')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">Xizmatlar /</div>
+                        <div data-i18n="Analytics">Xizmatlar</div>
                     </a>
                 </li>
 
@@ -185,7 +185,7 @@
                 <li class="menu-item @if(request()->routeIs('contacts.index'))  active  @endif">
                     <a href="{{route('contacts.index')}}" class="menu-link ">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">Bog`lanish /</div>
+                        <div data-i18n="Analytics">Bog`lanish</div>
                     </a>
                 </li>
 
@@ -193,7 +193,7 @@
                 <li class="menu-item @if(request()->routeIs('gallery.index'))  active  @endif">
                     <a href="{{route('gallery.index')}}" class="menu-link ">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">Gallery /</div>
+                        <div data-i18n="Analytics">Gallery</div>
                     </a>
                 </li>
             </ul>

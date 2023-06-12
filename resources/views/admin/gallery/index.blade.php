@@ -5,7 +5,7 @@
 
     <div class="card m-3" >
         <div class="container">
-            <table class="table table-hover">
+            <table class="table table-hover m-1">
                 <a href="{{route('gallery.create')}}" class="btn btn-outline-success m-2" type="button">Yangi</a>
                 <tr>
                     <td>ID</td>

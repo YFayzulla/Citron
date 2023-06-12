@@ -8,7 +8,7 @@
             <a href="{{route('projects.create')}}" class="btn btn-outline-success m-2">yangi</a>
             <table class="table table-hover m-1 ">
                 <tr>
-                    <td>id</td>
+                    <td>ID</td>
                     <td>name</td>
                     <td>malumot</td>
                     <td>rasm</td>
