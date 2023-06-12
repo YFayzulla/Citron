@@ -386,7 +386,6 @@
                         <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                     </div>
                 </div>
-{{----}}
             </div>
 
         </div>
