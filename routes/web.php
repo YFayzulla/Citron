@@ -23,9 +23,21 @@ use Illuminate\Support\Facades\Route;
 
 //client`s page
 
-Route::get('/',function (){
+Route::get('/home',function (){
     return view('homepage');
-});
+})->name('home');
+Route::get('/about',function (){
+    return view('aboute');
+})->name('about');
+Route::get('/Portfolio',function (){
+    return view('gallery');
+})->name('gallery');
+Route::get('/service',function (){
+    return view('service');
+})->name('service');
+Route::get('/contact',function (){
+    return view('contact');
+})->name('contact');
 
 
 
