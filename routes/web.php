@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 //client`s page
 
-Route::get('/home',function (){
+Route::get('/',function (){
     return view('homepage');
 })->name('home');
 Route::get('/about',function (){
