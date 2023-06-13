@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 //client`s page
 
 Route::get('/',function (){
-    return view('layout.app');
+    return view('homepage');
 });
 
 
