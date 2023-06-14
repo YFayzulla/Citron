@@ -6,7 +6,7 @@ return[
     'Uzbek_tili'=>'Узбекский',
     //Navbar
   'home'=>'главный',
-  'service'=>'сервисы',
+  'services'=>'услуги',
   'about'=>'наши информации',
   'project'=>'пройекты',
     'contact'=>'контакт',
@@ -29,12 +29,13 @@ return[
     'Career'=>'Карьера',
     //Contact
     'Bog’lanish'=>'Контакт',
-    'Bosh_sahifa'=>'Главная страница',
-    'Biz_bilan_bog’lanish'=>'Обратитесь к нам',
+    'our address'=>'Наш Адрес',
+    'call us'=>'Позвоните нам',
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'Для любого запроса пожалуйста обратитесь',
-    'Toliq_ismingiz'=>'Полное имя',
-    'Email'=>'емаил почта',
-    'Mavzu'=>'тема',
+    'ismingiz'=>'Ваше имя',
+    'your emil'=>'Ваше адрес электронной почты',
+    'Email'=>'Электронная почта',
+    'subject'=>'потвергать',
     'Xabar'=>'Сообщение',
     'Xabarni_yuborish'=>'Отправить',
     //Project
@@ -44,7 +45,6 @@ return[
     'Our_Projects'=>'Наши проекты',
     'Completed_Project'=>'Завершенные проекты',
     //service
-    'Hizmatlar'=>'Услуги',
     'Asosiy_sahifa'=>'Дом',
     'Saxifalar'=>'Страницы',
     'Hizmatlar'=>'Услуги',

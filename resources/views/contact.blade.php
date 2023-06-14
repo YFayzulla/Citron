@@ -14,7 +14,7 @@
             <div class="col-lg-6">
                 <div class="info-box mb-4">
                     <i class="bx bx-map"></i>
-                    <h3>Our Address</h3>
+                    <h3>{{__('index.our address')}}</h3>
                     <p>{{$user->address}}</p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="info-box  mb-4">
                     <i class="bx bx-envelope"></i>
-                    <h3>Email Us</h3>
+                    <h3>{{__('index.Email')}}</h3>
                     <p>{{$user->email}}</p>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="info-box  mb-4">
                     <i class="bx bx-phone-call"></i>
-                    <h3>Call Us</h3>
+                    <h3>{{__('index.call us')}}</h3>
                     <p>{{$user->tel}}</p>
                 </div>
             </div>
@@ -48,19 +48,19 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="{{__('index.ismingiz')}}" required>
                         </div>
                         <div class="col-md-6 form-group mt-3 mt-md-0">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="{{__('index.your email')}}" required>
                         </div>
                     </div>
                     <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="{{__('index.subject')}}" required>
                     </div>
                     <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        <textarea class="form-control" name="message" rows="5" placeholder="{{__('index.Xabar')}}" required></textarea>
                     </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    <div class="text-center mt-2"><button type="submit">{{__('index.Xabarni_yuborish')}}</button></div>
                 </form>
             </div>
 

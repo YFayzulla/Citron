@@ -5,8 +5,8 @@ return [
     'Rus_tili'=>'Russian',
     'Uzbek_tili'=>'Uzbek',
     //Navbar
-    'home'=>'Home page',
-    'service'=>'Service',
+    'home'=>'Home',
+    'services'=>'Services',
     'about'=>'About',
     'project'=>'Project',
     'contact'=>'Contact',
@@ -15,7 +15,6 @@ return [
     'text'=>'A Citron Of Inteligents & Creatives People',
     'Read More'=>'Read More',
     'Contact Us'=>'Contact Us',
-    'g'=>'Gallery',
     'photos'=>'Photos',
     //Gallery
     'Pages'=>'Pages',
@@ -30,12 +29,13 @@ return [
     'Career'=>'Career',
     //Contact
     'Bog’lanish'=>'Contact',
-    'Bosh_sahifa'=>'Head page',
-    'Biz_bilan_bog’lanish'=>'Contact Us',
+    'our address'=>'Our Address',
+    'call us'=>'Call Us',
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'For any query please contact',
-    'Toliq_ismingiz'=>'Full name',
+    'ismingiz'=>'Your name',
+    'your email'=>'Your email',
     'Email'=>'Email',
-    'Mavzu'=>'theme',
+    'subjec'=>'Subject',
     'Xabar'=>'Message',
     'Xabarni_yuborish'=>'Send',
     //Project
@@ -45,7 +45,6 @@ return [
     'Our_Projects'=>'Our Projects',
     'Completed_Project'=>'Completed Project',
     //service
-    'Hizmatlar'=>'Service',
     'Asosiy_sahifa'=>'Home',
     'Saxifalar'=>'Pages',
     'Hizmatlar'=>'Service',

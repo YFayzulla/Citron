@@ -6,7 +6,7 @@ return[
     'Uzbek_tili'=>'Uzbek tili',
     //Navbar
     'home'=>'Bosh sahifa',
-    'service'=>'Xizmatlar',
+    'services'=>'Xizmatlar',
     'about'=>'Biz xaqimizda',
       'project'=>'Loyihalar',
     'contact'=>'Bog`lanish',
@@ -29,12 +29,13 @@ return[
     'Career'=>'Erishilgan Mavqe',
     //Contact
     'Bog’lanish'=>'Bog’lanish',
-    'Bosh_sahifa'=>'Bosh sahifa',
-    'Biz_bilan_bog’lanish'=>'Biz bilan bog’lanish',
+    'our address'=>'Bizning manzil',
+    'call us'=>'Bizga qo’ng’iroq qiling',
     'Har_qanday_so’rov_uchun_murojaat_qiling'=>'Har qanday so’rov uchun murojaat qiling',
-    'Toliq_ismingiz'=>'Toliq ismingiz',
-    'Email'=>'Email',
-    'Mavzu'=>'Mavzu',
+    'ismingiz'=>'Ismingiz',
+    'your email'=>'Sizning elektron manzilingiz',
+    'Email'=>'Elektron pochta',
+    'subject'=>'Mavzu',
     'Xabar'=>'Xabar',
     'Xabarni_yuborish'=>'Yuborish',
     //Project
@@ -44,7 +45,6 @@ return[
     'Our_Projects'=>'Bizning lpyihalar',
     'Completed_Project'=>'Tugallanggan loyihalar',
     //service
-    'Hizmatlar'=>'Hizmatlar',
     'Asosiy_sahifa'=>'Asosiy sahifa',
     'Sahifalar'=>'Sahifalar',
     'Hizmatlar'=>'Hizmatlar',

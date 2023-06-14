@@ -65,17 +65,17 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto @if(Route::Is('home')) active @endif" href="{{route('home')}}">Home</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif" href="{{route('service')}}">Services</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">Portfolio</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('project')) active @endif" href="{{route('project')}}">Project</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('about')) active @endif" href="{{route('about')}}">Team</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif" href="{{route('contact')}}">Contact</a></li>
-                <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto @if(Route::Is('home')) active @endif" href="{{route('home')}}">{{__('index.home')}}</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif" href="{{route('service')}}">{{__('index.services')}}</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('about')) active @endif" href="{{route('about')}}">{{__('index.about')}}</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('project')) active @endif" href="{{route('project')}}">{{__('index.project')}}</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">{{__('index.gal')}}</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif" href="{{route('contact')}}">{{__('index.contact')}}</a></li>
+                <li class="dropdown"><a href="#"><span>{{__('index.Language')}}</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="locale/en">Englsh</a></li>
-                        <li><a href="locale/ru">Руский</a></li>
-                        <li><a href="locale/uz">Uzbekcha</a></li>
+                        <li><a href="locale/en">{{__('index.Inglis_tili')}}</a></li>
+                        <li><a href="locale/ru">{{__('index.Rus_tili')}}</a></li>
+                        <li><a href="locale/uz">{{__('index.Uzbek_tili')}}</a></li>
                     </ul>
                 </li>
             </ul>

@@ -6,9 +6,9 @@
         <div class="container">
 
             <div class="section-title">
-                <span>Portfolio</span>
-                <h2>Portfolio</h2>
-                <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+                <span>{{__('index.gal')}}</span>
+                <h2>{{__('index.gal')}}</h2>
+                <p>.........</p>
             </div>
 
             <div class="row" data-aos="fade-up">

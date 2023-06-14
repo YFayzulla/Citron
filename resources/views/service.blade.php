@@ -6,9 +6,9 @@
     <div class="container">
 
         <div class="section-title">
-            <span>Services</span>
-            <h2>Services</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <span>{{__('index.services')}}</span>
+            <h2>{{__('index.services')}}</h2>
+            <p>{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</p>
         </div>
 
         <div class="row">
