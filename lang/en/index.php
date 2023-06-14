@@ -56,11 +56,10 @@ return [
     'Saxifalar'=>'Pages',
     'Malumotlar'=>'Reference',
     'Yillki tajriba'=>'Years of experience',
-    'Jamo`a a`zolarimiz'=>'Our team members',
     'Homiylar'=>'Sponsors',
     'Tugallangan loyihalar'=>'Completed Project',
     'Bizning Jamoa'=>'Our team',
-    'Bizning A`zolar'=>'Our members',
+    'Bizning A`zolar'=>'Our team members',
     //Home
     'Our Projects'=>'Our projects',
     'Recently Completed Projects'=>'Recently Completed Projects',

@@ -60,7 +60,7 @@ return[
     'Homiylar'=>'Спонсоры',
     'Tugallangan loyihalar'=>'Завершенные проекты',
     'Bizning Jamoa'=>'Наша каманда',
-    'Bizning A`zolar'=>'Наши участники',
+    'Bizning A`zolar'=>'Члены нашей команды',
     //Home
     'Our Projects'=>'Наши проеты',
     'Recently Completed Projects'=>'Недавно завершенные проекты',
