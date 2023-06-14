@@ -69,14 +69,13 @@
                 <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif" href="{{route('service')}}">Services</a></li>
                 <li><a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">Portfolio</a></li>
                 <li><a class="nav-link scrollto @if(Route::Is('project')) active @endif" href="{{route('project')}}">Project</a></li>
-{{--                <li><a class="nav-link scrollto" href="{{'home'}}">Pricing</a></li>--}}
                 <li><a class="nav-link scrollto @if(Route::Is('about')) active @endif" href="{{route('about')}}">Team</a></li>
                 <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif" href="{{route('contact')}}">Contact</a></li>
                 <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Englsh</a></li>
-                        <li><a href="#">Руский</a></li>
-                        <li><a href="#">Uzbekcha</a></li>
+                        <li><a href="locale/en">Englsh</a></li>
+                        <li><a href="locale/ru">Руский</a></li>
+                        <li><a href="locale/uz">Uzbekcha</a></li>
                     </ul>
                 </li>
             </ul>

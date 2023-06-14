@@ -5,9 +5,9 @@
     <div class="container">
 
         <div class="section-title">
-            <span>Contact</span>
-            <h2>Contact</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <span>{{__('index.contact')}}</span>
+            <h2>{{__('index.contact')}}</h2>
+            <p>{{__('index.Har_qanday_so’rov_uchun_murojaat_qiling')}}</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -15,7 +15,7 @@
                 <div class="info-box mb-4">
                     <i class="bx bx-map"></i>
                     <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+                    <p>{{$user->address}}</p>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
                 <div class="info-box  mb-4">
                     <i class="bx bx-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>contact@example.com</p>
+                    <p>{{$user->email}}</p>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
                 <div class="info-box  mb-4">
                     <i class="bx bx-phone-call"></i>
                     <h3>Call Us</h3>
-                    <p>+1 5589 55488 55</p>
+                    <p>{{$user->tel}}</p>
                 </div>
             </div>
 
@@ -40,11 +40,12 @@
         <div class="row" data-aos="fade-up">
 
             <div class="col-lg-6 ">
-                <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188.9881532982176!2d60.631639074661955!3d41.57045670020718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfcf849d140c6d%3A0x88b459606f5b07d1!2z0KLQsNGI0LrQtdC90YLRgdC60LjQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC40L3RhNC-0YDQvNCw0YbQuNC-0L3QvdGL0YUg0YLQtdGF0L3QvtC70L7Qs9C40Y_RhQ!5e1!3m2!1sru!2s!4v1686740519590!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="col-lg-6">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action='{{route('contact.store')}}' method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -58,11 +59,6 @@
                     </div>
                     <div class="form-group mt-3">
                         <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
                     </div>
                     <div class="text-center"><button type="submit">Send Message</button></div>
                 </form>

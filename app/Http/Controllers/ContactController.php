@@ -30,18 +30,15 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-//        @dd($request);
-        Contact::create($request->all());
-        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ContactAlias $contact)
+    public function show()
     {
-        //
-    }
+//        $data=Contact::all();
+        return view('contact');    }
 
     /**
      * Show the form for editing the specified resource.

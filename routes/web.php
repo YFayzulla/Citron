@@ -35,9 +35,6 @@ Route::get('/Portfolio',function (){
 Route::get('/service',function (){
     return view('service');
 })->name('service');
-Route::get('/contact',function (){
-    return view('contact');
-})->name('contact');
 Route::get('/project',function (){
     return view('project');
 })->name('project');
@@ -49,12 +46,16 @@ Route::get('/project',function (){
 //lang
 
 //actions
+Route::get('store',[IndexController::class,'contact'])->name('contact');
+Route::post('store/store',[IndexController::class,'store'])->name('contact.store');
 
 //admin panel
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
 
 
 
@@ -72,8 +73,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    //Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
-//Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
 
 });
 

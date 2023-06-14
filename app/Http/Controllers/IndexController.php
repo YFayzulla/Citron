@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Contact;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\User;
@@ -16,4 +17,16 @@ class IndexController extends Controller
         $service = Service::all();
         return view('index', compact('abouts', 'projects', 'service'));
     }
+    public function contact(){
+        $user=User::find(1);
+//        dd($user);
+        return view('contact',compact('user'));
+    }
+    public function store(Request $request)
+    {
+//        dd($request);
+        Contact::create($request->all());
+        return redirect()->back();
+    }
+
 }
