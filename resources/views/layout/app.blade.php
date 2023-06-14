@@ -65,12 +65,13 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="{{'home'}}">Home</a></li>
-                <li><a class="nav-link scrollto" href="{{'service'}}">Services</a></li>
-                <li><a class="nav-link scrollto" href="{{'gallery'}}">Portfolio</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('home')) active @endif" href="{{route('home')}}">Home</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif" href="{{route('service')}}">Services</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">Portfolio</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('project')) active @endif" href="{{route('project')}}">Project</a></li>
 {{--                <li><a class="nav-link scrollto" href="{{'home'}}">Pricing</a></li>--}}
-                <li><a class="nav-link scrollto" href="{{'about'}}">Team</a></li>
-                <li><a class="nav-link scrollto" href="{{'contact'}}">Contact</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('about')) active @endif" href="{{route('about')}}">Team</a></li>
+                <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif" href="{{route('contact')}}">Contact</a></li>
                 <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Englsh</a></li>
