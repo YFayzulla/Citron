@@ -27,18 +27,16 @@ Route::get('/',function (){
     return view('homepage');
 })->name('home');
 Route::get('/about',function (){
-    return view('aboute');
+    return view('about');
 })->name('about');
-Route::get('/Portfolio',function (){
-    return view('gallery');
-})->name('gallery');
 Route::get('/service',function (){
     return view('service');
 })->name('service');
 Route::get('/project',function (){
     return view('project');
 })->name('project');
-
+//over
+Route::get('/Portfolio',[GalleryController::class,'show'])->name('gallery');
 
 
 
@@ -51,9 +49,9 @@ Route::post('store/store',[IndexController::class,'store'])->name('contact.store
 
 //admin panel
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return view('admin.dashboard');
+//})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/locale/{lang}',[LocalizationController::class,'setLang']);
 

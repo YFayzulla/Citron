@@ -55,7 +55,7 @@ class GalleryController extends Controller
     public function show()
     {
         $galleries = Gallery::all();
-        return view('testimonial',compact('galleries'));
+        return view('gallery',compact('galleries'));
     }
 
     /**
