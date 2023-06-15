@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('specialty_ru');
             $table->string('specialty_en');
             $table->string('email');
+            $table->string('tel');
             $table->string('image');
             $table->timestamps();
         });

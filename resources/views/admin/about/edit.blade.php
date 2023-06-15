@@ -17,6 +17,7 @@
                 <input type="text" class="form-control m-2" value="{{$about->specialty_ru}}" name="specialty_ru">
                 <input type="text" class="form-control m-2" value="{{$about->specialty_en}}" name="specialty_en">
                 <input type="email" class="form-control m-2" value="{{$about->email}}" name="email">
+                <input type="text" class="form-control m-2" value="{{$about->tel}}" name="tel">
                 <input type="file" class="form-control m-2"  name="thumbnail">
                 <button type="submit" class="btn-outline-warning btn m-2">saqlash</button>
             </form>
