@@ -119,6 +119,6 @@ class AboutController extends Controller
     public function destroy(About $about)
     {
         $about->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success');
     }
 }
