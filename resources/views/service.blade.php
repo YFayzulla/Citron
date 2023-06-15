@@ -21,7 +21,6 @@
                     </div>
                 </div>
             @endforeach
-
         </div>
     </section><!-- End Services Section -->
 
