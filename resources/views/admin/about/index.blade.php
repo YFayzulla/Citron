@@ -11,6 +11,7 @@
                     <td>ID</td>
                     <td>ismi</td>
                     <td>soxasi</td>
+                    <td>tel</td>
                     <td>email</td>
                     <td>rasim</td>
                     <td>action</td>
@@ -21,6 +22,7 @@
                     <th>{{$i}}</th>
                     <th>{{$about->name}}</th>
                     <th>{{$about->specialty_uz}}</th>
+                    <th>{{$about->tel}}</th>
                     <th>{{$about->email}}</th>
                     <th>
                         <img src="Aphoto/{{$about->image}}" width="80px">

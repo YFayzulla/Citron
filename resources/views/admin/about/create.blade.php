@@ -10,6 +10,7 @@
             <input type="text" class="form-control m-2" placeholder="soxasining ruscha nomi" name="specialty_ru">
             <input type="text" class="form-control m-2" placeholder="soxasining inglischa nomi " name="specialty_en">
             <input type="email" class="form-control m-2" placeholder="pochta" name="email">
+            <input type="tel" class="form-control m-2" placeholder="tel raqam" name="tel">
             <input type="file" class="form-control m-2" placeholder="rasim" name="image">
             <button type="submit" class="btn-outline-warning btn m-2">saqlash</button>
         </form>

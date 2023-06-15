@@ -35,6 +35,7 @@ class AboutController extends Controller
             'specialty_ru'=>'required|string',
             'specialty_en'=>'required|string',
             'email'=>'required|email',
+            'tel'=>'required',
             'image'=>'required'
             ]);
         $data= new About();
@@ -48,6 +49,7 @@ class AboutController extends Controller
             $data['specialty_ru']=$request->specialty_ru;
             $data['specialty_en']=$request->specialty_en;
             $data['email']=$request->email;
+            $data['tel']=$request->tel;
             $data['image']=$filename;
         }
 
@@ -87,6 +89,7 @@ class AboutController extends Controller
             'specialty_ru'=>'required|string',
             'specialty_en'=>'required|string',
             'email'=>'required|email',
+            'tel'=>'required',
             'thumbnail'=>'required'
         ]);
             $user= auth()->user()->name;
@@ -100,6 +103,7 @@ class AboutController extends Controller
             $about['specialty_ru']=$request->specialty_ru;
             $about['specialty_en']=$request->specialty_en;
             $about['email']=$request->email;
+            $about['tel']=$request->tel;
             $about['image']=$filename;
 //            dd($request);
 
