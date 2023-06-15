@@ -26,13 +26,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function (){
     return view('homepage');
 })->name('home');
-Route::get('/service',function (){
-    return view('service');
-})->name('service');
 Route::get('/project',function (){
     return view('project');
 })->name('project');
 //over
+
+
+Route::get('/service',[ServiceController::class,'show'])->name('service');
 Route::get('/Portfolio',[GalleryController::class,'show'])->name('gallery');
 Route::get('/about',[AboutController::class,'show'])->name('about');
 

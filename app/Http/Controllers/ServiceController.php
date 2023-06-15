@@ -62,8 +62,8 @@ class ServiceController extends Controller
      */
     public function show()
     {
-        $service=Service::all();
-        return view('service',compact('service'));
+        $services=Service::all();
+        return view('service',compact('services'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ServiceController extends Controller
             'desc_uz' => 'required|string',
             'desc_ru' => 'required|string',
             'desc_en' => 'required|string',
-            'image' => 'required'
+            'thumbnail' => 'required'
         ]);
 
         $user= auth()->user()->name;
