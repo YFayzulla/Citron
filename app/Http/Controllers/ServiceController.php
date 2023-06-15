@@ -30,6 +30,15 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name_uz' => 'required|string',
+            'name_ru' => 'required|string',
+            'name_en' => 'required|string',
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'required|string',
+            'desc_en' => 'required|string',
+            'image' => 'required'
+        ]);
         $data= new Service();
         if($request->hasfile('image')){
 //            dd($request);
@@ -53,8 +62,8 @@ class ServiceController extends Controller
      */
     public function show()
     {
-        $service=Service::all();
-        return view('service',compact('service'));
+        $services=Service::all();
+        return view('service',compact('services'));
     }
 
     /**
@@ -70,6 +79,17 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
+
+        $request->validate([
+            'name_uz' => 'required|string',
+            'name_ru' => 'required|string',
+            'name_en' => 'required|string',
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'required|string',
+            'desc_en' => 'required|string',
+            'thumbnail' => 'required'
+        ]);
+
         $user= auth()->user()->name;
         if($request->hasfile('thumbnail')){
             $file= $request->file('thumbnail');
@@ -93,6 +113,6 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success');
     }
 }
