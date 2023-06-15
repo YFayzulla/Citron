@@ -29,12 +29,10 @@ Route::get('/',function (){
 Route::get('/service',function (){
     return view('service');
 })->name('service');
-Route::get('/project',function (){
-    return view('project');
-})->name('project');
 //over
 Route::get('/Portfolio',[GalleryController::class,'show'])->name('gallery');
 Route::get('/about',[AboutController::class,'show'])->name('about');
+Route::get('/project',[ProjectController::class, 'show'])->name('project');
 
 
 
