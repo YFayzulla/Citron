@@ -1,6 +1,16 @@
 @extends('layout.index')
 @section('content')
-<div class="card m-3" >
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <div class="card m-3" >
     <div class="container">
         <br>
         <form action="{{route('abouts.store')}}" class="" enctype="multipart/form-data" method="post">
