@@ -14,8 +14,8 @@ class IndexController extends Controller
     public function index(){
         $abouts = About::all();
         $projects = Project::all();
-        $service = Service::all();
-        return view('index', compact('abouts', 'projects', 'service'));
+        $services = Service::all();
+        return view('homepage', compact('abouts', 'projects', 'services'));
     }
     public function contact(){
         $user=User::find(1);

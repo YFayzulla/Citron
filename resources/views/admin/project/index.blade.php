@@ -14,8 +14,9 @@
                     <td>rasm</td>
                     <td>action</td>
                 </tr>
+                @foreach($projects as $project)
+
                 <tr>
-                    @foreach($projects as $project)
                     <th>{{$project->id}}</th>
                     <th>{{$project->name_uz}}</th>
                     <th>{{$project->desc_uz}}</th>
@@ -35,9 +36,10 @@
                             </svg></button>
                         </form>
                     </th>
-                    @endforeach
                 </tr>
+                @endforeach
             </table>
+
         </div>
     </div>
 

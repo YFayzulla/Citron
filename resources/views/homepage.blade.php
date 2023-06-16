@@ -75,7 +75,38 @@
                 </div>
 
             </div>
-        </section><!-- End Why Us Section -->
+        </section>
+        <!-- End Why Us Section -->
+
+        <!-- ======= Projects Section ======= -->
+        <section id="projects" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <span>{{__('index.Project')}}</span>
+                    <h2>{{__('index.Project')}}</h2>
+                    <p>{{__('index.Completed_Project')}}</p>
+                </div>
+
+                <div class="row">
+                    @foreach($projects as $project)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="card border-2">
+
+                                <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
+                                <div class="portfolio-info">
+                                    <center>
+                                        <h4 class="container">{{($project->{'name_'.app()->getLocale()})}}</h4>
+                                    </center>
+                                    <p class="mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+        <!-- End Projects Section -->
 
         <!-- ======= Clients Section ======= -->
         <section id="clients" class="clients">
@@ -113,68 +144,30 @@
         </section><!-- End Clients Section -->
 
         <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <span>{{__('index.services')}}</span>
-                    <h2>{{__('index.services')}}</h2>
-                    <p>{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</p>
-                </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                        </div>
-                    </div>
+                    <section id="services" class="services">
+                        <div class="container">
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="section-title">
+                                <span>{{__('index.services')}}</span>
+                                <h2>{{__('index.services')}}</h2>
+                                <p>{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</p>
+                            </div>
+                            @foreach($services as $service)
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                                        <div class="icon-box">
+                                            <div><img src="Aphoto/{{$service->image}}" alt="" width="200px" height="100px"></div>
+                                            <h4><a href="">{{($service->{'name_' . app()->getLocale()})}}</a></h4>
+                                            <p>{{($service->{'desc_' . app()->getLocale()})}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                        </div>
-                    </div>
-
+                    </section>
                 </div>
-
-            </div>
-        </section><!-- End Services Section -->
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
@@ -255,74 +248,42 @@
                 </div>
 
             </div>
-        </section><!-- End Pricing Section -->
+        </section>
+        <!-- End Pricing Section -->
 
-        <!-- ======= Team Section ======= -->
+        <!-- Start About -->
         <section id="team" class="team">
             <div class="container">
 
                 <div class="section-title">
-                    <span>{{__('index.Bizning Jamoa')}}</span>
-                    <h2>{{__('index.Bizning Jamoa')}}</h2>
-                    <p>......</p>
+                    <span>{{__('index.about')}}</span>
+                    <h2>{{__('index.about')}}</h2>
+                    <p>{{__('index.Bizning A`zolar')}}</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                            <img src="assets/img/team/team-1.jpg" alt="">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
-                            <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                        @foreach($abouts as $about)
+                            <div class="member">
+                                <img src="Aphoto/{{$about->image}}" alt="">
+                                <h4>{{$about->name}}</h4>
+                                <span>{{($about->{'specialty_' . app()->getLocale()})}}</span>
+                                <p>
+                                </p>
+                                <div class="social">
+                                    <a href=""></a>
+                                    <a href=""></a>
+                                    <a href=""></a>
+                                    <a href=""></a>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                            <img src="assets/img/team/team-2.jpg" alt="">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Product Manager</span>
-                            <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                            <img src="assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
-        </section><!-- End Team Section -->
+        </section>
+        <!-- End About -->
     </main><!-- End #main -->
 
 @endsection

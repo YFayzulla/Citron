@@ -23,18 +23,19 @@ use Illuminate\Support\Facades\Route;
 
 //client`s page
 
-Route::get('/',function (){
-    return view('homepage');
-})->name('home');
-<<<<<<< HEAD
+
 Route::get('/service',function (){
     return view('service');
 })->name('service');
-=======
+
 Route::get('/project',function (){
     return view('project');
 })->name('project');
->>>>>>> origin/main
+
+Route::get('/service',function (){
+    return view('service');
+})->name('service');
+
 //over
 
 
@@ -42,6 +43,7 @@ Route::get('/service',[ServiceController::class,'show'])->name('service');
 Route::get('/Portfolio',[GalleryController::class,'show'])->name('gallery');
 Route::get('/about',[AboutController::class,'show'])->name('about');
 Route::get('/project',[ProjectController::class, 'show'])->name('project');
+Route::get('/',[IndexController::class, 'index'])->name('home');
 
 
 

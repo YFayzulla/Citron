@@ -14,13 +14,17 @@
                 <div class="row">
                     @foreach($projects as $project)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <h4 class="container">{{$project->name_uz}}</h4>
+                            <div class="card border-2">
+
                             <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
                             <div class="portfolio-info">
-                                <p class="mt-2">{{$project->desc_uz}}</p>
+                                <center>
+                                <h4 class="container">{{($project->{'name_'.app()->getLocale()})}}</h4>
+                                </center>
+                                <p class="mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
                             </div>
                         </div>
-
+                        </div>
                     @endforeach
                 </div>
         </div>
