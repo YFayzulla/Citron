@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('desc_ru');
             $table->string('desc_en');
             $table->string('image');
-            $table->string('partner')->nullable();
+            $table->string('user_id')->nullable();
             $table->string('status')->default('0');
             $table->timestamps();
         });

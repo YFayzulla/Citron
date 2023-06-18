@@ -8,19 +8,7 @@
             <div class="section-title">
                 <span>{{__('index.gal')}}</span>
                 <h2>{{__('index.gal')}}</h2>
-{{--                <p>.........</p>--}}
             </div>
-
-{{--            <div class="row" data-aos="fade-up">--}}
-{{--                <div class="col-lg-12 d-flex justify-content-center">--}}
-{{--                    <ul id="portfolio-flters">--}}
-{{--                        <li data-filter="*" class="filter-active">All</li>--}}
-{{--                        <li data-filter=".filter-app">App</li>--}}
-{{--                        <li data-filter=".filter-card">Card</li>--}}
-{{--                        <li data-filter=".filter-web">Web</li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">
                 @foreach($galleries as $gallery)

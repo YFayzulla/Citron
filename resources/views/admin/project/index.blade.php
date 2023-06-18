@@ -1,8 +1,6 @@
 @extends('layout.index')
 @section('content')
 
-
-
     <div class="card m-4" >
         <div class="container">
             <a href="{{route('projects.create')}}" class="btn btn-outline-success m-2">yangi</a>
