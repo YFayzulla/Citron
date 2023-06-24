@@ -73,9 +73,9 @@
                 <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif" href="{{route('contact')}}">{{__('index.contact')}}</a></li>
                 <li class="dropdown"><a href="#"><span>{{__('index.Language')}}</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="locale/en">{{__('index.Inglis_tili')}}</a></li>
-                        <li><a href="locale/ru">{{__('index.Rus_tili')}}</a></li>
-                        <li><a href="locale/uz">{{__('index.Uzbek_tili')}}</a></li>
+                        <li><a href="locale/en">{{__('index.Inglis_tili')}}<img src="{{ asset('assets/vendor/flag/uk.png') }}" width="30" height="30"/></a></li>
+                        <li><a href="locale/ru">{{__('index.Rus_tili')}}<img src="{{ asset('assets/vendor/flag/russia.png') }}" width="30" height="30"/></a></li>
+                        <li><a href="locale/uz">{{__('index.Uzbek_tili')}}<img src="{{ asset('assets/vendor/flag/uzb.png') }}" width="30" height="30"/></a></li>
                     </ul>
                 </li>
             </ul>
