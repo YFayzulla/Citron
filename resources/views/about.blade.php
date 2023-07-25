@@ -14,7 +14,7 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
                     @foreach($abouts as $about)
                     <div class="member">
-                        <img src="Aphoto/{{$about->image}}" alt="">
+                        <img src="Aphoto/{{$about->image}}" alt="" width="500px" height="150px">
                         <h4>{{$about->name}}</h4>
                         <span>{{($about->{'specialty_' . app()->getLocale()})}}</span>
                         <p>
