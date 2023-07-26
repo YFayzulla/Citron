@@ -21,6 +21,11 @@
                 <input type="text" name="desc_uz" class="form-control m-3" placeholder="malumot uz">
                 <input type="text" name="desc_ru" class="form-control m-3" placeholder="malumot ru">
                 <input type="text" name="desc_en" class="form-control m-3" placeholder="malumot en">
+                <select name="user_id" class="form-control m-3">
+                    @foreach($users as $user)
+                        <option></option>
+                    @endforeach
+                </select>
                 <input type="file" name="image" class="form-control m-3">
                 <button class="btn btn-outline-success m-3 float-left" type="submit">save</button>
             </form>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 
 
+use App\Models\About;
 use App\Models\Project;
+use App\Models\ProjectHasUser;
 use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
@@ -22,7 +24,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.project.create');
+        $users=About::all();
+        return view('admin.project.create',compact('users'));
     }
 
     /**
@@ -53,9 +56,14 @@ class ProjectController extends Controller
             $data['desc_ru']=$request->desc_ru;
             $data['desc_en']=$request->desc_en;
             $data['image']=$filename;
+            $data['user_id']=$request->user_id;
         }
 
         $data->save();
+
+        $data_new = new ProjectHasUser();
+
+
         return redirect()->route('projects.index')->with('success');
 
     }
