@@ -1,35 +1,99 @@
 @extends('layout.index')
 @section('content')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+
+    <div class="flex flex-col overflow-y-auto md:flex-row">
+        <div class="h-32 md:h-auto md:w-1/2">
+            <img
+                aria-hidden="true"
+                class="object-cover w-full h-full dark:hidden"
+                src="{{ asset('admin/assets/img/create-account-office.jpeg') }}"
+                alt="Office"
+            />
+            <img
+                aria-hidden="true"
+                class="hidden object-cover w-full h-full dark:block"
+                src="{{ asset('admin/assets/img/create-account-office-dark.jpeg') }}"
+                alt="Office"
+            />
         </div>
-    @endif
+        <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="w-full">
+                <h1
+                    class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
+                >
+                    Create About
+                </h1>
 
-    <div class="card m-3" >
-    <div class="container">
-        <br>
-        <form action="{{route('abouts.store')}}" class="" enctype="multipart/form-data" method="post">
-            @csrf
-            <input type="text" class="form-control m-2" placeholder="ism" name="name">
-            <input type="text" class="form-control m-2" placeholder="soxasining o1zbekcha nomi" name="specialty_uz">
-            <input type="text" class="form-control m-2" placeholder="soxasining ruscha nomi" name="specialty_ru">
-            <input type="text" class="form-control m-2" placeholder="soxasining inglischa nomi " name="specialty_en">
-            <input type="email" class="form-control m-2" placeholder="pochta" name="email">
-            <input type="tel" class="form-control m-2" placeholder="tel raqam" name="tel">
-            <input type="file" class="form-control m-2" placeholder="rasim" name="image">
-            <button type="submit" class="btn-outline-warning btn m-2">saqlash</button>
-        </form>
+                <form method="post" action="{{route('abouts.store')}}" enctype="multipart/form-data">
+                    @csrf
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Ismi</span>
+                        <input type="text" name="name" value="{{ old('name') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Soxasining o'zbekcha nomi</span>
+                        <input type="text" name="specialty_uz" value="{{ old('specialty_uz') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Soxasining ruscha nomi</span>
+                        <input type="text" name="specialty_ru" value="{{ old('specialty_ru') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Soxasining inglizcha nomi</span>
+                        <input type="text" name="specialty_en" value="{{ old('specialty_en') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Pochta</span>
+                        <input type="email" name="email" value="{{ old('email') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Tel raqam</span>
+                        <input type="tel" name="tel" value="{{ old('tel') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Rasim</span>
+                        <input type="file" name="image" value="{{ old('image') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
 
-
+                    <!-- You should use a button here, as the anchor is only used for the example  -->
+                    <button type="submit"
+                            class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                    >
+                        Saqlash
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
+
+@endsection
 
 
-
-
+@section('script')
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '{{ $error }}',
+                    footer: '<a href="{{route('abouts.create')}}">Why do I have this issue?</a>'
+                })
+            </script>
+        @endforeach
+    @endif
 @endsection

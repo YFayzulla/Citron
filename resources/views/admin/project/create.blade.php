@@ -1,35 +1,107 @@
 @extends('layout.index')
 @section('content')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+
+    <div class="flex flex-col overflow-y-auto md:flex-row">
+        <div class="h-32 md:h-auto md:w-1/2">
+            <img
+                aria-hidden="true"
+                class="object-cover w-full h-full dark:hidden"
+                src="{{ asset('admin/assets/img/create-account-office.jpeg') }}"
+                alt="Office"
+            />
+            <img
+                aria-hidden="true"
+                class="hidden object-cover w-full h-full dark:block"
+                src="{{ asset('admin/assets/img/create-account-office-dark.jpeg') }}"
+                alt="Office"
+            />
         </div>
-    @endif
+        <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="w-full">
+                <h1
+                    class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
+                >
+                    Create Project
+                </h1>
 
+                <form method="post" action="{{route('projects.store')}}" enctype="multipart/form-data">
+                    @csrf
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Loyixa nomi uz</span>
+                        <input type="text" name="name_uz" value="{{ old('name_uz') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Loyixa nomi en</span>
+                        <input type="text" name="name_en" value="{{ old('name_en') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Loyixa nomi ru</span>
+                        <input type="text" name="name_ru" value="{{ old('name_ru') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Malumot uz</span>
+                        <input type="text" name="desc_uz" value="{{ old('desc_uz') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Malumot en</span>
+                        <input type="text" name="desc_en" value="{{ old('desc_en') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Malumot ru</span>
+                        <input type="text" name="desc_ru" value="{{ old('desc_ru') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">User</span>
+                        <select name="user_id" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
+                            @foreach($abouts as $about)
+                                <option>{{ $about->name }}</option>
+                            @endforeach
+                    </select>
+                    </label>
+                    <label class="block mt-1 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Rasim</span>
+                        <input type="file" name="image" value="{{ old('image') }}"
+                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        />
+                    </label>
 
-    <div class="card m-4" >
-        <div class="container">
-            <form action="{{route('projects.store')}}" method="post" enctype="multipart/form-data">
-                @csrf
-                <input type="text" name="name_uz" class="form-control m-3" placeholder="loyixa nomi uz">
-                <input type="text" name="name_ru" class="form-control m-3" placeholder="loyixa nomi ru">
-                <input type="text" name="name_en" class="form-control m-3" placeholder="loyixa nomi en">
-                <input type="text" name="desc_uz" class="form-control m-3" placeholder="malumot uz">
-                <input type="text" name="desc_ru" class="form-control m-3" placeholder="malumot ru">
-                <input type="text" name="desc_en" class="form-control m-3" placeholder="malumot en">
-                <select name="user_id" class="form-control m-3">
-                    @foreach($users as $user)
-                        <option></option>
-                    @endforeach
-                </select>
-                <input type="file" name="image" class="form-control m-3">
-                <button class="btn btn-outline-success m-3 float-left" type="submit">save</button>
-            </form>
+                    <!-- You should use a button here, as the anchor is only used for the example  -->
+                    <button type="submit"
+                            class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                    >
+                        Saqlash
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
+@endsection
+
+
+@section('script')
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '{{ $error }}',
+                    footer: '<a href="{{route('projects.create')}}">Why do I have this issue?</a>'
+                })
+            </script>
+        @endforeach
+    @endif
 @endsection

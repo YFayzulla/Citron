@@ -1,41 +1,95 @@
 @extends('layout.index')
 @section('content')
 
+    <main class="h-full pb-16 overflow-y-auto">
+        <div class="container grid px-6 mx-auto">
+            <h2
+                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+            >
+                Contacts
+            </h2>
+            <div class="w-full overflow-hidden rounded-lg shadow-xm">
+                <div class="w-full overflow-x-auto">
+                    <table class="w-full whitespace-no-wrap hover:table-fixed">
+                        <thead>
+                        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <th scope="col" class="px-4 py-3">ID</th>
+                            <th scope="col" class="px-4 py-3">Name</th>
+                            <th scope="col" class="px-4 py-3">Email</th>
+                            <th scope="col" class="px-4 py-3">Subject</th>
+                            <th scope="col" class="px-4 py-3">Massage</th>
+                            <th scope="col" class="px-4 py-3">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        @foreach($data as $info)
+                            <tr class="text-gray-700 dark:text-gray-400">
+                                <td class="px-4 py-3 text-sm">{{$info->id}}</td>
+                                <td class="px-4 py-3 text-sm">{{$info->name}}</td>
+                                <td class="px-4 py-3 text-sm">{{$info->email}}</td>
+                                <td class="px-4 py-3 text-sm">{{$info->subject}}</td>
+                                <td class="px-4 py-3 text-sm">{{$info->message}}</td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <form action="{{route('contacts.destroy',$info->id)}}" method="post" id="form-delete">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="button"
+                                                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                                    onclick="delete_button({{$info->id}})">
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                     viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                          d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                          clip-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
 
-    <div class="card m-4 p-2" >
-        <div class="container">
-            <table class="table table-hover m-1 ">
-                <tr>
-                    <td>ID</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>subject</td>
-                    <td>massage</td>
-                    <td>action</td>
-                </tr>
-                @foreach($data as $info)
+                        </tbody>
+                    </table>
 
-                <tr>
-                    <th>{{$info->id}}</th>
-                    <th>{{$info->name}}</th>
-                    <th>{{$info->email}}</th>
-                    <th>{{$info->subject}}</th>
-                    <th>{{$info->message}}</th>
-                    <th>
-                        <form action="{{route('contacts.destroy',$info->id)}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class=" btn btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
-                                </svg></button>
-                        </form>
-                    </th>
-                </tr>
-                @endforeach
-            </table>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
+@endsection
+
+@section('script')
+    <script>
+        form = document.getElementById('form-delete');
+
+        function delete_button(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.action = '/contacts/' + id;
+                    form.submit()
+                }
+            })
+        }
+
+        @if(session('success'))
+        Swal.fire({
+            icon: 'success',
+            title: '{{session('success')}}',
+            showConfirmButton: false,
+            timer: 2000
+        })
+        @endif
+
+    </script>
 
 @endsection

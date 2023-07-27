@@ -26,7 +26,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('abouts', [AboutController::class, 'index']);
 Route::post('abouts', [AboutController::class, 'store']);
 Route::get('abouts/{id}', [AboutController::class, 'show']);
-Route::get('abouts/{id}/edit', [AboutController::class, 'edit']);
 Route::put('abouts/{id}/edit', [AboutController::class, 'update']);
 Route::delete('abouts/{id}/delete', [AboutController::class, 'destroy']);
 //Contact

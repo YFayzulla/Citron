@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
-//azamatjon balt
+
 class GalleryController extends Controller
 {
     /**
@@ -30,19 +30,19 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string',
+            'name' => 'required',
             'desc' => 'required',
             'image' => 'required'
         ]);
         $data= new Gallery();
         if($request->hasfile('image')){
-//            dd($request);
             $file= $request->file('image');
             $filename = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('Aphoto'),$filename);
             $data['name']=$request->name;
             $data['desc']=$request->desc;
             $data['image']=$filename;
+            dd($request->name);
         }
 
         $data->save();
