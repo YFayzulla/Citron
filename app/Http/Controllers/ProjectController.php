@@ -16,7 +16,8 @@ class ProjectController extends Controller
     public function index()
     {
         $projects=Project::all();
-        return view('admin.project.index',["projects"=>$projects]);
+        $abouts = About::all();
+        return view('admin.project.index', ["projects"=>$projects], ["abouts" => $abouts]);
     }
 
     /**
@@ -24,8 +25,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $users=About::all();
-        return view('admin.project.create',compact('users'));
+        $abouts = About::all();
+        return view('admin.project.create',compact('abouts'));
     }
 
     /**
@@ -35,17 +36,16 @@ class ProjectController extends Controller
     {
 //        dd($request);
         $request->validate([
-            'name_uz'=>'required|string',
-            'name_ru'=>'required|string',
-            'name_en'=>'required|string',
-            'desc_uz'=>'required|string',
-            'desc_ru'=>'required|string',
-            'desc_en'=>'required|string',
+            'name_uz'=>'required',
+            'name_ru'=>'required',
+            'name_en'=>'required',
+            'desc_uz'=>'required',
+            'desc_ru'=>'required',
+            'desc_en'=>'required',
             'image'=>'required'
         ]);
         $data= new Project();
         if($request->hasfile('image')){
-//            dd($request);
             $file= $request->file('image');
             $filename = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('Aphoto'),$filename);
@@ -82,7 +82,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.project.edit',compact('project'));
+        $abouts = About::all();
+        return view('admin.project.edit',compact('project','abouts'));
     }
 
     /**
