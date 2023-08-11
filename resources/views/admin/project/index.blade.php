@@ -22,9 +22,8 @@
                         <thead>
                         <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                             <th scope="col" class="px-4 py-3">ID</th>
-                            <th scope="col" class="px-4 py-3">Ismi</th>
+                            <th scope="col" class="px-4 py-3">Nomi</th>
                             <th scope="col" class="px-4 py-3">Malumot</th>
-                            <th scope="col" class="px-4 py-3">User</th>
                             <th scope="col" class="px-4 py-3">rasim</th>
                             <th scope="col" class="px-4 py-3">Action</th>
                         </tr>
@@ -40,9 +39,6 @@
                                 <td class="px-4 py-3 text-sm">{{ $i++ }}</td>
                                 <td class="px-4 py-3 text-sm">{{$project->name_uz}}</td>
                                 <td class="px-4 py-3 text-sm">{{$project->desc_uz}}</td>
-                                @foreach($abouts as $about)
-                                    <td class="px-4 py-3 text-sm">{{$about->name}}</td>
-                                @endforeach
                                 <td  class="px-4 py-3 text-sm">
                                     <img src="Aphoto/{{$project->image}}" width="80px">
                                 </td>
@@ -56,6 +52,11 @@
                                                     d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                                             </svg>
                                         </a>
+
+                                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person color-white" viewBox="0 0 16 16">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                            </svg></a>
+
                                         <form action="{{route('projects.destroy',$project->id)}}" method="post" id="form-delete">
                                             @csrf
                                             @method('DELETE')
