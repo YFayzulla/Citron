@@ -65,4 +65,5 @@ return [
     'Recently Completed Projects'=>'Recently Completed Projects',
     'What Solutions We Provide'=>'What Solutions We Provide',
     'Our Services'=>'Our Services',
+    'Day'=>'Day'
 ];

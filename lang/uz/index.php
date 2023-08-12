@@ -66,4 +66,5 @@ return[
     'Recently Completed Projects'=>'Yaqinda tugallangan loyihalar',
     'What Solutions We Provide'=>'Biz qanday yichimlarni tagdim etamiz',
     'Our Services'=>'Xizmatlarimiz',
+    'Day'=>'Kun',
 ];

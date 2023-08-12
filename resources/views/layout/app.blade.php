@@ -95,7 +95,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-info">
-                        <h3>Day</h3>
+                        <h3>{{__('index.Day')}}</h3>
                         <p>
                             A108 Adam Street <br>
                             NY 535022, USA<br><br>
@@ -115,11 +115,11 @@
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('home')}}">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('about')}}">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('service')}}">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('project')}}">Projects</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('gallery')}}">Gallery</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('home')}}">{{__('index.home')}}</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('about')}}">{{__('index.about')}}</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('service')}}">{{__('index.services')}}</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('project')}}">{{__('index.project')}}</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('gallery')}}">{{__('index.gallery')}}</a></li>
                     </ul>
                 </div>
 
