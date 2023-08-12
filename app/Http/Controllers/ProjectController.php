@@ -74,7 +74,8 @@ class ProjectController extends Controller
     public function show()
     {
         $projects=Project::all();
-        return view('project',["projects"=>$projects]);
+        $users=ProjectHasUser::all();
+        return view('project',compact('projects','users'));
     }
 
     /**

@@ -35,7 +35,7 @@
                         @foreach($users as $user)
                             <tr class="text-gray-700 dark:text-gray-400">
                                 <td class="px-4 py-3 text-sm">{{ $i++ }}</td>
-                                <td class="px-4 py-3 text-sm">{{$user->user_name->name}}</td>
+                                <td class="px-4 py-3 text-sm">{{$user->username->name}}</td>
                                 <td class="px-4 py-3 text-sm">
                                     <div class="flex items-center space-x-4 text-sm">
 

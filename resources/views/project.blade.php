@@ -10,6 +10,7 @@
                     <h2>{{__('index.Project')}}</h2>
                     <p>{{__('index.Completed_Project')}}</p>
                 </div>
+{{--            @dd($users)--}}
 
                 <div class="row">
                     @foreach($projects as $project)
@@ -22,6 +23,12 @@
                                 <h4 class="container">{{($project->{'name_'.app()->getLocale()})}}</h4>
                                 </center>
                                 <p class="mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                                @php $users=DB::table('project_has_user')->where('project_id', '=', $project->id)->get(); @endphp
+
+                                <p class="text-center"> {{__('index.loyixa_ishtirokchilari')}} </p>
+                                @foreach($users as $user)
+                                    <td class="px-4 py-3 text-sm">{{$user->user_id}}</td>
+                                @endforeach
                             </div>
                         </div>
                         </div>

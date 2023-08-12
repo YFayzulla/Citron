@@ -67,4 +67,5 @@ return[
     'What Solutions We Provide'=>'Biz qanday yichimlarni tagdim etamiz',
     'Our Services'=>'Xizmatlarimiz',
     'Day'=>'Kun',
+    'loyixa_ishtirokchilari'=>'loyixa ishtirokchilari'
 ];
