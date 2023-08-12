@@ -50,7 +50,7 @@
                   aria-hidden="true"
               ></span>
                     <a
-                        class="@if(request()->routeIs('abouts.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                        class="@if(request()->routeIs('abouts.index'))    @endif inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                         href="{{route('abouts.index')}}"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
