@@ -71,12 +71,15 @@ Route::middleware('auth')->group(function () {
     Route::resource('projects',ProjectController::class);
     Route::resource('services',ServiceController::class);
     Route::resource('/gallery',GalleryController::class);
-
+//    extra
+    Route::get('/add_user/{id}',[IndexController::class,'project_add_user'])->name('add_user');
+    Route::get('/create_user/{id}',[IndexController::class,'project_create_user'])->name('create_user');
+    Route::post('/save/user',[IndexController::class,'project_save_user'])->name('save_user');
+    Route::delete('/user/delete/{id}',[IndexController::class,'delete'])->name('delete.user');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 
 });
 

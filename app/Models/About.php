@@ -9,4 +9,8 @@ class About extends Model
 {
     use HasFactory;
     protected $fillable=['name','specialty_uz','specialty_ru','specialty_en','email','tel','project_id','image'];
+
+    public function project_has_user(){
+        return $this->belongsTo();
+    }
 }

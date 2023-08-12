@@ -42,7 +42,7 @@ class GalleryController extends Controller
             $data['name']=$request->name;
             $data['desc']=$request->desc;
             $data['image']=$filename;
-            dd($request->name);
+//            dd($request->name);
         }
 
         $data->save();
