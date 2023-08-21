@@ -66,4 +66,6 @@ return[
     'Recently Completed Projects'=>'Недавно завершенные проекты',
     'What Solutions We Provide'=>'Какие решения мы предлагаем',
     'Our Services'=>'Наши услуги',
+    'Day'=>'День',
+    'loyixa_ishtirokchilari'=>'участники проекта'
 ];
