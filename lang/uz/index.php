@@ -44,6 +44,7 @@ return[
     'Pages'=>'Sahifalar',
     'Our_Projects'=>'Bizning lpyihalar',
     'Completed_Project'=>'Tugallanggan loyihalar',
+    'Loyixa_qatnashchilari'=>'Loyixa ishtirokchilari',
     //service
     'Asosiy_sahifa'=>'Asosiy sahifa',
     'Sahifalar'=>'Sahifalar',

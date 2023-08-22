@@ -13,8 +13,11 @@ class ProjectHasUser extends Model
     protected $table='project_has_user';
     protected $fillable=['user_id','project_id'];
 
-    public function username(){
-//        dd('salom');
+    public function user(){
         return $this->belongsTo(About::class,'user_id','id');
+    }
+
+    public function project(){
+        return $this->belongsTo(Project::class,'project_id','id');
     }
 }

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('specialty_en');
             $table->string('email');
             $table->string('tel');
-            $table->string('project_id')->nullable();
             $table->string('image');
             $table->timestamps();
         });

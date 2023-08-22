@@ -44,6 +44,7 @@ return [
     'Pages'=>'Pages',
     'Our_Projects'=>'Our Projects',
     'Completed_Project'=>'Completed Project',
+    'Loyixa_qatnashchilari'=>'Project participants',
     //service
     'Asosiy_sahifa'=>'Home',
     'Saxifalar'=>'Pages',

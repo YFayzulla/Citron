@@ -16,15 +16,35 @@
                 @foreach($projects as $project)
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <button type="button">
-                            <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
-                            <div class="portfolio-info">
-                                <center>
-                                    <h4 class="container">{{($project->{'name_'.app()->getLocale()})}}</h4>
-                                </center>
-                                <p class="mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
-                            </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$project->id}}">
+                            <center>
+                                <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
+                            </center>
                         </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal{{$project->id}}" tabindex="-1"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content  ">
+                                    <div class="modal-body">
+                                        <img src="Aphoto/{{$project->image}}" class="img-thumbnail " alt="">
+                                        <h5 class="text-center">{{($project->{'name_' . app()->getLocale()})}}</h5>
+                                    </div>
+                                    <p class="text"
+                                       style="margin-left: 100px ;margin-right: 100px ">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                                    <ul>
+                                        <h2>{{__('index.Loyixa_qatnashchilari')}}</h2>
+                                        @foreach($project->project_has_user as $item)
+
+                                            <li>
+                                                {{$item->user->name}}
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 @endforeach
             </div>
