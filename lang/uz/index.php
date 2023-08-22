@@ -42,7 +42,7 @@ return[
     'Project'=>'Loyiha',
     'Home'=>'Uy',
     'Pages'=>'Sahifalar',
-    'Our_Projects'=>'Bizning lpyihalar',
+    'Our_Projects'=>'Bizning loyihalarimiz',
     'Completed_Project'=>'Tugallanggan loyihalar',
     'Loyixa_qatnashchilari'=>'Loyixa ishtirokchilari',
     //service

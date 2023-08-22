@@ -5,7 +5,7 @@ return[
     'Rus_tili'=>'Русский',
     'Uzbek_tili'=>'Узбекский',
     //Navbar
-  'home'=>'Главная',
+  'home'=>'Главная страница',
   'services'=>'Услуги',
   'about'=>'О',
   'project'=>'Пройекты',
@@ -13,7 +13,7 @@ return[
   'gal'=>'Галерея',
     //home
     'text'=>'Цитрон - команда гениев и творцов',
-    'Read More'=>'Информация',
+    'Read More'=>'Читать больше',
     'Contact Us'=>'Обратитесь к нам',
     //Gallery
     'photos'=>'Изображения',
@@ -40,13 +40,13 @@ return[
     'Xabarni_yuborish'=>'Отправить сообщения',
     //Project
     'Project'=>'Проект',
-    'Home'=>'Дом',
+    'Home'=>'Главная страница',
     'Pages'=>'Страницы',
     'Our_Projects'=>'Наши проекты',
     'Completed_Project'=>'Завершенные проекты',
     'Loyixa_qatnashchilari'=>'Участники проекта',
     //service
-    'Asosiy_sahifa'=>'Дом',
+    'Asosiy_sahifa'=>'Главная страница',
     'Saxifalar'=>'Страницы',
     'Hizmatlar'=>'Услуги',
     'Bizning_xizmatlar'=>'Наши сервисы',
