@@ -13,4 +13,7 @@ class Project extends Model
     public function project_has_user(){
         return $this->hasMany(ProjectHasUser::class);
     }
+    public function user(){
+        return $this->hasMany(ProjectHasUser::class ,'user_id','id');
+    }
 }

@@ -90,15 +90,35 @@
 
                 <div class="row">
                     @foreach($projects as $project)
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="card border-2">
 
-                                <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
-                                <div class="portfolio-info">
-                                    <center>
-                                        <h4 class="container">{{($project->{'name_'.app()->getLocale()})}}</h4>
-                                    </center>
-                                    <p class="mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$project->id}}">
+                                <center>
+                                    <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
+                                </center>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal{{$project->id}}" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content  ">
+                                        <div class="modal-body">
+                                            <img src="Aphoto/{{$project->image}}" class="img-thumbnail " alt="">
+                                            <h5 class="text-center">{{($project->{'name_' . app()->getLocale()})}}</h5>
+                                        </div>
+                                        <p class="text"
+                                           style="margin-left: 100px ;margin-right: 100px ">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                                        <ul>
+                                            <h2>{{__('index.Loyixa_qatnashchilari')}}</h2>
+                                            @foreach($project->project_has_user as $item)
+
+                                                <li>
+                                                    {{$item->user->name}}
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -154,17 +174,23 @@
                                 <h2>{{__('index.services')}}</h2>
                                 <p>{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</p>
                             </div>
-                            @foreach($services as $service)
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-                                        <div class="icon-box">
-                                            <div><img src="Aphoto/{{$service->image}}" alt="" width="200px" height="100px"></div>
-                                            <h4><a href="">{{($service->{'name_' . app()->getLocale()})}}</a></h4>
-                                            <p>{{($service->{'desc_' . app()->getLocale()})}}</p>
+                            <div class="row">
+
+                                @foreach($services as $service)
+                                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+                                        <div class="card" style="width: 25rem">
+                                            <center>
+                                                <img src="Aphoto/{{$service->image}}" class="img-thumbnail" alt="">
+                                                <h2>{{($service->{'name_' . app()->getLocale()})}}</h2>
+                                            </center>
+                                            <p style="margin-left: 20px ;margin-right: 20px">{{($service->{'desc_' . app()->getLocale()})}}</p>
+                                            {{--                    </div>--}}
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -261,25 +287,20 @@
                     <p>{{__('index.Bizning A`zolar')}}</p>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                    <div class="row">
                         @foreach($abouts as $about)
-                            <div class="member">
-                                <img src="Aphoto/{{$about->image}}" alt="">
-                                <h4>{{$about->name}}</h4>
-                                <span>{{($about->{'specialty_' . app()->getLocale()})}}</span>
-                                <p>
-                                </p>
-                                <div class="social">
-                                    <a href=""></a>
-                                    <a href=""></a>
-                                    <a href=""></a>
-                                    <a href=""></a>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="card" style="width: 25rem">
+                                    <center>
+                                        <img src="Aphoto/{{$about->image}}" class="img-thumbnail" alt="">
+                                        <h2>{{($about->{'name_' . app()->getLocale()})}}</h2>
+                                    </center>
+                                    <p style="margin-left: 20px ;margin-right: 20px">{{($about->{'desc_' . app()->getLocale()})}}</p>
+                                    {{--                    </div>--}}
                                 </div>
                             </div>
                         @endforeach
                     </div>
-                </div>
 
             </div>
         </section>

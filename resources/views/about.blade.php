@@ -11,25 +11,20 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                    @foreach($abouts as $about)
-                    <div class="member">
-                        <img src="Aphoto/{{$about->image}}" alt="" width="500px" height="150px">
-                        <h4>{{$about->name}}</h4>
-                        <span>{{($about->{'specialty_' . app()->getLocale()})}}</span>
-                        <p>
-                        </p>
-                        <div class="social">
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
+                @foreach($abouts as $about)
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+                        <div class="card" style="width: 25rem">
+                            <center>
+                                <img src="Aphoto/{{$about->image}}" class="img-thumbnail" alt="">
+{{--                                <h2>{{($about->name}}</h2>--}}
+                            </center>
+                            <p style="margin-left: 20px ;margin-right: 20px">{{($about->{'desc_' . app()->getLocale()})}}</p>
+                            {{--                    </div>--}}
                         </div>
                     </div>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
-
         </div>
     </section><!-- End Team Section -->
 @endsection
