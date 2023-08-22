@@ -5,7 +5,7 @@ return[
     'Rus_tili'=>'Русский',
     'Uzbek_tili'=>'Узбекский',
     //Navbar
-  'home'=>'Главный',
+  'home'=>'Главная',
   'services'=>'Услуги',
   'about'=>'О',
   'project'=>'Пройекты',
