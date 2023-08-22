@@ -17,9 +17,9 @@
                         <div class="card" style="width: 25rem">
                             <center>
                                 <img src="Aphoto/{{$about->image}}" class="img-thumbnail" alt="">
-{{--                                <h2>{{($about->name}}</h2>--}}
+                                <h2>{{$about->name}}</h2>
                             </center>
-                            <p style="margin-left: 20px ;margin-right: 20px">{{($about->{'desc_' . app()->getLocale()})}}</p>
+                            <p style="margin-left: 20px ;margin-right: 20px">{{($about->{'specialty_' . app()->getLocale()})}}</p>
                             {{--                    </div>--}}
                         </div>
                     </div>
