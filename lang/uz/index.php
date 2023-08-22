@@ -1,18 +1,18 @@
 <?php
 return[
     'Language'=>'Til',
-    'Inglis_tili'=>'Ingliz tili',
-    'Rus_tili'=>'Rus tili',
-    'Uzbek_tili'=>'Uzbek tili',
+    'Inglis_tili'=>'Ingliz',
+    'Rus_tili'=>'Rus',
+    'Uzbek_tili'=>'Uzbek',
     //Navbar
     'home'=>'Bosh sahifa',
     'services'=>'Xizmatlar',
     'about'=>'Biz xaqimizda',
-      'project'=>'Loyihalar',
+    'project'=>'Loyihalar',
     'contact'=>'Bog`lanish',
     'gal'=>'Galereya',
     //home
-    'text'=>'Citron aqilliylar va Ijodkorlar jamoasi ',
+    'text'=>'Citron aqillilar va ijodkorlar jamoasi ',
     'Read More'=>'Ko`proq bilish',
     'Contact Us'=>'Bog`lanish',
     //Gallery
@@ -37,7 +37,7 @@ return[
     'Email'=>'Elektron pochta',
     'subject'=>'Mavzu',
     'Xabar'=>'Xabar',
-    'Xabarni_yuborish'=>'Yuborish',
+    'Xabarni_yuborish'=>'Yuborish yuborish',
     //Project
     'Project'=>'Loyiha',
     'Home'=>'Uy',
@@ -67,5 +67,5 @@ return[
     'What Solutions We Provide'=>'Biz qanday yichimlarni tagdim etamiz',
     'Our Services'=>'Xizmatlarimiz',
     'Day'=>'Kun',
-    'loyixa_ishtirokchilari'=>'loyixa ishtirokchilari'
+    'loyixa_ishtirokchilari'=>'Loyiha ishtirokchilari'
 ];

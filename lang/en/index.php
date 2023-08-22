@@ -12,7 +12,7 @@ return [
     'contact'=>'Contact',
     'gal'=>'Gallery',
 
-    'text'=>'A Citron Of Inteligents & Creatives People',
+    'text'=>'Citron is a team of geniuses and creators',
     'Read More'=>'Read More',
     'Contact Us'=>'Contact Us',
     'photos'=>'Photos',

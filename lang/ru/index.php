@@ -5,14 +5,14 @@ return[
     'Rus_tili'=>'Русский',
     'Uzbek_tili'=>'Узбекский',
     //Navbar
-  'home'=>'главный',
-  'services'=>'услуги',
-  'about'=>'наши информации',
-  'project'=>'пройекты',
-    'contact'=>'контакт',
-    'gal'=>'галерея',
+  'home'=>'Главный',
+  'services'=>'Услуги',
+  'about'=>'О',
+  'project'=>'Пройекты',
+  'contact'=>'Контакт',
+  'gal'=>'Галерея',
     //home
-    'text'=>'Цитрон умных и творческих людей',
+    'text'=>'Цитрон - команда гениев и творцов',
     'Read More'=>'Информация',
     'Contact Us'=>'Обратитесь к нам',
     //Gallery
@@ -21,11 +21,11 @@ return[
     'Testimonial'=>'Рекомендация',
     //Footer
     'Address'=>'Адрес',
-    'Quick_Link'=>'Быстрая связь',
+    'Quick_Link'=>'Прямая ссылка',
     'About_Us'=>'О нас',
     'Contact_Us'=>'Обратитесь к нам',
     'Privacy_Policy'=>'Полис секретности',
-    'Terms&Condition'=>'Сроки  и условия',
+    'Terms&Condition'=>'Сроки и условия',
     'Career'=>'Карьера',
     //Contact
     'Bog’lanish'=>'Контакт',
@@ -35,9 +35,9 @@ return[
     'ismingiz'=>'Ваше имя',
     'your emil'=>'Ваше адрес электронной почты',
     'Email'=>'Электронная почта',
-    'subject'=>'потвергать',
+    'subject'=>'Предмет',
     'Xabar'=>'Сообщение',
-    'Xabarni_yuborish'=>'Отправить',
+    'Xabarni_yuborish'=>'Отправить сообщения',
     //Project
     'Project'=>'Проект',
     'Home'=>'Дом',
@@ -67,5 +67,5 @@ return[
     'What Solutions We Provide'=>'Какие решения мы предлагаем',
     'Our Services'=>'Наши услуги',
     'Day'=>'День',
-    'loyixa_ishtirokchilari'=>'участники проекта'
+    'loyixa_ishtirokchilari'=>'Участники проекта'
 ];
