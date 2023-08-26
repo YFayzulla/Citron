@@ -656,68 +656,60 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 120px 90px;
-  transition: all ease-in-out 0.3s;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+.services .member {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    background: #fff;
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 120px;
-  height: 90px;
-  background: #cc1616;
-  transition: all 0.3s ease-out 0s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transform-style: preserve-3d;
+.services .member img {
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
 }
 
-.services .icon-box .icon i {
-  color: #fff;
-  font-size: 28px;
+.services .member:hover {
+    background: #cc1616;
+    border-color: #cc1616;
+    padding: 70px 20px 90px 20px;
 }
 
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
+.services .member:hover .icon {
+    background: #fff;
 }
 
-.services .icon-box h4 a {
-  color: #191919;
+.services .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
 }
 
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
+.services .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
 }
 
-.services .icon-box:hover {
-  background: #cc1616;
-  border-color: #cc1616;
-  padding: 120px 90px 90px 90px;
+.services .member p {
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #aaaaaa;
 }
 
-.services .icon-box:hover .icon {
-  background: #fff;
+.services .member .social {
+    margin-top: 15px;
 }
 
-.services .icon-box:hover .icon i {
-  color: #cc1616;
+.services .member .social a {
+    color: #919191;
+    transition: 0.3s;
 }
 
-.services .icon-box:hover .icon::before {
-  background: #e82d2d;
-}
-
-.services .icon-box:hover h4 a,
-.services .icon-box:hover p {
-  color: #fff;
+.services .member .social a:hover {
+    color: #cc1616;
 }
 
 /*--------------------------------------------------------------

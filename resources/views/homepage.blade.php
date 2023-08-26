@@ -177,13 +177,13 @@
                             <div class="row">
 
                                 @foreach($services as $service)
-                                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-                                        <div class="icon-box">
-                                            <div class="icon">
-                                                <img src="Aphoto/{{$service->image}}" class="img-thumbnail" alt="">
-                                            </div>
+                                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                        <div class="member">
+                                            <img src="Aphoto/{{$service->image}}" alt="">
                                             <h4>{{($service->{'name_' . app()->getLocale()})}}</h4>
-                                            <p>{{($service->{'desc_' . app()->getLocale()})}}</p>
+                                            <p>
+                                                {{($service->{'desc_' . app()->getLocale()})}}
+                                            </p>
                                         </div>
                                     </div>
                                 @endforeach
