@@ -23,25 +23,25 @@
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal{{$project->id}}" tabindex="-1"
-                             aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content  ">
-                                    <div class="modal-body">
-                                        <img src="Aphoto/{{$project->image}}" class="img-thumbnail " alt="">
-                                        <h5 class="text-center">{{($project->{'name_' . app()->getLocale()})}}</h5>
-                                    </div>
-                                    <p class="text"
-                                       style="margin-left: 100px ;margin-right: 100px ">{{($project->{'desc_' . app()->getLocale()})}}</p>
-                                    <ul>
-                                        <h2>{{__('index.Loyixa_qatnashchilari')}}</h2>
-                                        @foreach($project->project_has_user as $item)
+                        <div class="row">
+                            <div class="modal fade" id="exampleModal{{$project->id}}" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <img src="Aphoto/{{$project->image}}" class="img-thumbnail " alt="">
+                                            <h3 class="text-center">{{($project->{'name_' . app()->getLocale()})}}</h3>
+                                            <p class="text-center mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
+                                        </div>
 
-                                            <li>
-                                                {{$item->user->name}}
-                                            </li>
-                                        @endforeach
-                                    </ul>
+                                        <h5>{{__('index.Loyixa_qatnashchilari')}}:
+                                            @foreach($project->project_has_user as $item)
+                                                <lf>
+                                                    {{$item->user->name }}<?php echo ","." "?>
+                                                </lf>
+                                            @endforeach
+                                        </h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -53,12 +53,3 @@
     <!-- End Projects Section -->
 
 @endsection
-
-{{--for modal--}}
-
-{{--@php $users=DB::table('project_has_user')->where('project_id', '=', $project->id)->get(); @endphp--}}
-
-{{--<p class="text-center"> {{__('index.loyixa_ishtirokchilari')}} </p>--}}
-{{--@foreach($users as $user)--}}
-{{--    <td class="px-4 py-3 text-sm">{{$user->user_id}}</td>--}}
-{{--@endforeach--}}
