@@ -26,6 +26,8 @@
                             <th scope="col" class="px-4 py-3">soxasi</th>
                             <th scope="col" class="px-4 py-3">tel</th>
                             <th scope="col" class="px-4 py-3">email</th>
+                            <th scope="col" class="px-4 py-3">Telegram</th>
+                            <th scope="col" class="px-4 py-3">Instagram</th>
                             <th scope="col" class="px-4 py-3">rasim</th>
                             <th scope="col" class="px-4 py-3">Action</th>
                         </tr>
@@ -42,6 +44,8 @@
                                 <td class="px-4 py-3 text-sm">{{$about->specialty_uz}}</td>
                                 <td class="px-4 py-3 text-sm">{{$about->tel}}</td>
                                 <td class="px-4 py-3 text-sm">{{$about->email}}</td>
+                                <td class="px-4 py-3 text-sm">{{$about->telegram}}</td>
+                                <td class="px-4 py-3 text-sm">{{$about->instagram}}</td>
                                 <td  class="px-4 py-3 text-sm">
                                     <img src="Aphoto/{{$about->image}}" width="80px">
                                 </td>

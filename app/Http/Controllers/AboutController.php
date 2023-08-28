@@ -50,6 +50,8 @@ class AboutController extends Controller
             $data['specialty_en']=$request->specialty_en;
             $data['email']=$request->email;
             $data['tel']=$request->tel;
+            $data['telegram']=$request->telegram;
+            $data['instagram']=$request->instagram;
             $data['image']=$filename;
         }
 
@@ -104,6 +106,8 @@ class AboutController extends Controller
             $about['specialty_en']=$request->specialty_en;
             $about['email']=$request->email;
             $about['tel']=$request->tel;
+            $about['telegram']=$request->telegram;
+            $about['instagram']=$request->instagram;
             $about['image']=$filename;
 //            dd($request);
 

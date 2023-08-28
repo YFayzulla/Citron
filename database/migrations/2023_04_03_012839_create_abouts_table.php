@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('tel');
             $table->string('image');
+            $table->string('telegram')->nullable();
+            $table->string('instagram')->nullable();
             $table->timestamps();
         });
     }
