@@ -670,15 +670,6 @@ section {
     margin: 0 0 30px 0;
 }
 
-.services .member:hover {
-    background: #cc1616;
-    border-color: #cc1616;
-    padding: 70px 20px 90px 20px;
-}
-
-.services .member:hover .icon {
-    background: #fff;
-}
 
 .services .member h4 {
     font-weight: 700;
