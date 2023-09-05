@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
 {{--    <!-- Favicons -->--}}
-{{--        <link href="{{asset('assets/img/favicon.png')}}" rel="icon">--}}
-{{--        <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">--}}
+    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,8 +21,8 @@
 
     <!-- Vendor CSS Files -->
     <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
-{{--        <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">--}}
-{{--        <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">--}}
+    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
@@ -96,8 +96,10 @@
                        href="{{route('gallery')}}">{{__('index.gal')}}</a></li>
                 <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif"
                        href="{{route('contact')}}">{{__('index.contact')}}</a></li>
-                <li class="dropdown"><a href="#"><span>{{__('index.Language')}}</span> <i
-                                class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>{{__('index.Language')}}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg></a>
                     <ul>
                         <li><a href="locale/en">{{__('index.Inglis_tili')}}<img
                                         src="{{ asset('assets/vendor/flag/uk.png') }}" width="30" height="30"/></a></li>
@@ -110,7 +112,9 @@
                     </ul>
                 </li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
         </nav><!-- .navbar -->
 
     </div>
