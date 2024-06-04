@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('galleries', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->mediumText('desc');
-            $table->string('image');
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->tinyInteger('is_grant')->after('user_id')->default(0);
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('galleries');
+        Schema::table('projects', function (Blueprint $table) {
+            $table->dropColumn('is_grant');
+        });
     }
 };

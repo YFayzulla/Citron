@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 
-
 use App\Models\About;
 use App\Models\Project;
 use App\Models\ProjectHasUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 class ProjectController extends Controller
 {
     /**
@@ -15,9 +16,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects=Project::all();
+        $projects = Project::all();
         $abouts = About::all();
-        return view('admin.project.index', ["projects"=>$projects], ["abouts" => $abouts]);
+        return view('admin.project.index', ["projects" => $projects], ["abouts" => $abouts]);
     }
 
     /**
@@ -26,7 +27,7 @@ class ProjectController extends Controller
     public function create()
     {
         $abouts = About::all();
-        return view('admin.project.create',compact('abouts'));
+        return view('admin.project.create', compact('abouts'));
     }
 
     /**
@@ -34,38 +35,43 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
+
         $request->validate([
-            'name_uz'=>'required',
-            'name_ru'=>'required',
-            'name_en'=>'required',
-            'desc_uz'=>'required',
-            'desc_ru'=>'required',
-            'desc_en'=>'required',
-            'image'=>'required'
+            'name_uz' => 'required',
+            'name_ru' => 'required',
+            'name_en' => 'required',
+            'desc_uz' => 'required',
+            'desc_ru' => 'required',
+            'desc_en' => 'required',
+            'image' => 'required'
         ]);
-        $data= new Project();
-        if($request->hasfile('image')){
-            $file= $request->file('image');
-            $filename = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('Aphoto'),$filename);
-            $data['name_uz']=$request->name_uz;
-            $data['name_ru']=$request->name_ru;
-            $data['name_en']=$request->name_en;
-            $data['desc_uz']=$request->desc_uz;
-            $data['desc_ru']=$request->desc_ru;
-            $data['desc_en']=$request->desc_en;
-            $data['image']=$filename;
-            $data['user_id']=$request->user_id;
-        }
+
+        $data = new Project();
+        $file = $request->file('image');
+        $uuid = Str::uuid()->toString();
+        $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('Aphoto'), $filename);
+
+        $data['name_uz'] = $request->name_uz;
+        $data['name_ru'] = $request->name_ru;
+        $data['name_en'] = $request->name_en;
+        $data['desc_uz'] = $request->desc_uz;
+        $data['desc_ru'] = $request->desc_ru;
+        $data['desc_en'] = $request->desc_en;
+        $data['image'] = $filename;
+        $data['user_id'] = $request->user_id;
 
         $data->save();
 
-        $data_new = new ProjectHasUser();
-
-
         return redirect()->route('projects.index')->with('success');
 
+    }
+
+    public function showGrants()
+    {
+        $projects = Project::query()->where('is_grant', 1)->get();
+        $users = ProjectHasUser::query()->whereIn('project_id', $projects->pluck('id')->toArray())->get();
+        return view('project', compact('projects', 'users'));
     }
 
     /**
@@ -73,9 +79,9 @@ class ProjectController extends Controller
      */
     public function show()
     {
-        $projects=Project::all();
-        $users=ProjectHasUser::all();
-        return view('project',compact('projects','users'));
+        $projects = Project::query()->where('is_grant', 0)->get();
+        $users = ProjectHasUser::query()->whereIn('project_id', $projects->pluck('id')->toArray())->get();
+        return view('project', compact('projects', 'users'));
     }
 
     /**
@@ -84,7 +90,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $abouts = About::all();
-        return view('admin.project.edit',compact('project','abouts'));
+        return view('admin.project.edit', compact('project', 'abouts'));
     }
 
     /**
@@ -92,7 +98,6 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-
         $request->validate([
             'name_uz' => 'required|string',
             'name_ru' => 'required|string',
@@ -100,31 +105,34 @@ class ProjectController extends Controller
             'desc_uz' => 'required|string',
             'desc_ru' => 'required|string',
             'desc_en' => 'required|string',
-            'thumbnail' => 'required'
+            'image' => ''
         ]);
-        $user = auth()->user()->name;
-        if ($request->hasfile('thumbnail')) {
-            $file = $request->file('thumbnail');
-            $filename = date('YmdHi') . $file->getClientOriginalExtension();
-            $file->move(public_path('Aphoto'), $filename);
-            $project['name_uz'] = $request->name_uz;
-            $project['name_ru'] = $request->name_ru;
-            $project['name_en'] = $request->name_en;
-            $project['desc_uz'] = $request->desc_uz;
-            $project['desc_ru'] = $request->desc_ru;
-            $project['desc_en'] = $request->desc_en;
-            $project['image']=$filename;
-//            dd($request);
+        $filename = null;
 
-            $project->update($request->all());
-            return redirect()->route('projects.index')->with('success');
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $uuid = Str::uuid()->toString();
+            $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('Aphoto'), $filename);
         }
+
+        $project['name_uz'] = $request->name_uz;
+        $project['name_ru'] = $request->name_ru;
+        $project['name_en'] = $request->name_en;
+        $project['desc_uz'] = $request->desc_uz;
+        $project['desc_ru'] = $request->desc_ru;
+        $project['desc_en'] = $request->desc_en;
+        $project['image'] = $filename ?? $project->image;
+
+        $project->update();
+        return redirect()->route('projects.index')->with('success');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project $project)
+    public
+    function destroy(Project $project)
     {
         $project->delete();
         return redirect()->route('projects.index')->with('success');

@@ -40,8 +40,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/service', [ServiceController::class, 'show'])->name('service');
-Route::get('/Portfolio', [GalleryController::class, 'show'])->name('gallery');
+Route::get('/portfolio', [GalleryController::class, 'show'])->name('gallery');
 Route::get('/about', [AboutController::class, 'show'])->name('about');
+Route::get('/grant-projects', [ProjectController::class, 'showGrants'])->name('grant_projects');
 Route::get('/project', [ProjectController::class, 'show'])->name('project');
 Route::get('/', [IndexController::class, 'index'])->name('home');
 

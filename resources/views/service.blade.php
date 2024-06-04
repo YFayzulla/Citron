@@ -6,9 +6,9 @@
         <div class="container">
 
             <div class="section-title">
-                <span>{{__('index.services')}}</span>
-                <h2>{{__('index.services')}}</h2>
-                <p>{{__('index.Qanday_yechimlarni_taqdim_etamiz')}}</p>
+                <span>{{__('index.navbar.services')}}</span>
+                <h2>{{__('index.navbar.services')}}</h2>
+                <p>{{__('index.services.solutions')}}</p>
             </div>
 
             <div class="row">

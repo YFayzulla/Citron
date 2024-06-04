@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AboutController extends Controller
 {
@@ -12,8 +13,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $abouts=About::all();
-        return view('admin.about.index',compact('abouts'));
+        $abouts = About::all();
+        return view('admin.about.index', compact('abouts'));
     }
 
     /**
@@ -30,30 +31,31 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required|string',
-            'specialty_uz'=>'required|string',
-            'specialty_ru'=>'required|string',
-            'specialty_en'=>'required|string',
-            'email'=>'required|email',
-            'tel'=>'required',
-            'image'=>'required'
-            ]);
-        $data= new About();
-        if($request->hasfile('image')){
-//            dd($request);
-            $file= $request->file('image');
-            $filename = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('Aphoto'),$filename);
-            $data['name']=$request->name;
-            $data['specialty_uz']=$request->specialty_uz;
-            $data['specialty_ru']=$request->specialty_ru;
-            $data['specialty_en']=$request->specialty_en;
-            $data['email']=$request->email;
-            $data['tel']=$request->tel;
-            $data['telegram']=$request->telegram;
-            $data['instagram']=$request->instagram;
-            $data['image']=$filename;
-        }
+            'name' => 'required|string',
+            'specialty_uz' => 'required|string',
+            'specialty_ru' => 'required|string',
+            'specialty_en' => 'required|string',
+            'email' => 'required|email',
+            'tel' => 'required',
+            'image' => 'required|image'
+        ]);
+
+        $data = new About();
+
+        $file = $request->file('image');
+        $uuid = Str::uuid()->toString();
+        $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('Aphoto'), $filename);
+
+        $data['name'] = $request->name;
+        $data['specialty_uz'] = $request->specialty_uz;
+        $data['specialty_ru'] = $request->specialty_ru;
+        $data['specialty_en'] = $request->specialty_en;
+        $data['email'] = $request->email;
+        $data['tel'] = $request->tel;
+        $data['telegram'] = $request->telegram;
+        $data['instagram'] = $request->instagram;
+        $data['image'] = $filename;
 
         $data->save();
         return redirect()->route('abouts.index')->with('success');
@@ -65,8 +67,8 @@ class AboutController extends Controller
      */
     public function show()
     {
-        $abouts=About::all();
-        return view('about',compact('abouts'));
+        $abouts = About::all();
+        return view('about', compact('abouts'));
     }
 
     /**
@@ -75,7 +77,7 @@ class AboutController extends Controller
 
     public function edit(About $about)
     {
-        return view('admin.about.edit',['about'=>$about]);
+        return view('admin.about.edit', ['about' => $about]);
     }
 
     /**
@@ -84,36 +86,36 @@ class AboutController extends Controller
 
     public function update(Request $request, About $about)
     {
-
         $request->validate([
-            'name'=>'required|string',
-            'specialty_uz'=>'required|string',
-            'specialty_ru'=>'required|string',
-            'specialty_en'=>'required|string',
-            'email'=>'required|email',
-            'tel'=>'required',
-            'thumbnail'=>'required'
+            'name' => 'required|string',
+            'specialty_uz' => 'required|string',
+            'specialty_ru' => 'required|string',
+            'specialty_en' => 'required|string',
+            'email' => 'required|email',
+            'tel' => 'required',
+            'image' => 'required'
         ]);
-            $user= auth()->user()->name;
-            if($request->hasfile('thumbnail')){
+        $filename = null;
 
-            $file= $request->file('thumbnail');
-            $filename = date('YmdHi').$file->getClientOriginalExtension();
-            $file->move(public_path('Aphoto'),$filename);
-            $about['name']=$request->name;
-            $about['specialty_uz']=$request->specialty_uz;
-            $about['specialty_ru']=$request->specialty_ru;
-            $about['specialty_en']=$request->specialty_en;
-            $about['email']=$request->email;
-            $about['tel']=$request->tel;
-            $about['telegram']=$request->telegram;
-            $about['instagram']=$request->instagram;
-            $about['image']=$filename;
-//            dd($request);
-
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $uuid = Str::uuid()->toString();
+            $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('Aphoto'), $filename);
         }
-//@dd($data,$request);
-        $about->update($request->all());
+
+        $about['name'] = $request->name;
+        $about['specialty_uz'] = $request->specialty_uz;
+        $about['specialty_ru'] = $request->specialty_ru;
+        $about['specialty_en'] = $request->specialty_en;
+        $about['email'] = $request->email;
+        $about['tel'] = $request->tel;
+        $about['telegram'] = $request->telegram;
+        $about['instagram'] = $request->instagram;
+        $about['image'] = $filename ?? $about->image;
+
+
+        $about->update();
         return redirect()->route('abouts.index')->with('success');
     }
 

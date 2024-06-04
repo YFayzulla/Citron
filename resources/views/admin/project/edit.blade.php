@@ -73,7 +73,7 @@
                     </label>
                     <label class="block mt-1 text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Rasim</span>
-                        <input type="file" name="thumbnail" value="{{$project->image}}"
+                        <input type="file" name="image" value="{{$project->image}}"
                                class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                         />
                     </label>
@@ -100,7 +100,7 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: '{{ $error }}',
-                    footer: '<a href="{{route('projects.edit')}}">Why do I have this issue?</a>'
+                    footer: 'Why do I have this issue?'
                 })
             </script>
         @endforeach

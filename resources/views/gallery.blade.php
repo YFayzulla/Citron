@@ -6,8 +6,8 @@
         <div class="container">
 
             <div class="section-title">
-                <span>{{__('index.gal')}}</span>
-                <h2>{{__('index.gal')}}</h2>
+                <span>{{__('index.gallery.title')}}</span>
+                <h2>{{__('index.gallery.title')}}</h2>
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">

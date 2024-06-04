@@ -9,20 +9,21 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-{{--    <!-- Favicons -->--}}
-    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    {{--    <!-- Favicons -->--}}
+    {{--        <link href="{{asset('assets/img/favicon.png')}}" rel="icon">--}}
+    {{--        <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">--}}
 
     <!-- Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    {{--        <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">--}}
+    {{--        <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">--}}
     <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
@@ -38,11 +39,11 @@
             margin: 0 auto; /* Center the image horizontally */
         }
 
-            .modal-content {
-                    padding: 20px;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
+        .modal-content {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
     </style>
 
@@ -62,8 +63,8 @@
 <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
-            <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+            <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">citronlab@gmail.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +998 90 578 64 78
         </div>
         <div class="social-links d-none d-md-block">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -77,44 +78,74 @@
 <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
+        <img  style="height: 4em;" src="{{ asset('logo.jpg') }}" alt="Logo">
 
-        <h1 class="logo"><a href="">CiTroN</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto @if(Route::Is('home')) active @endif"
-                       href="{{route('home')}}">{{__('index.home')}}</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif"
-                       href="{{route('service')}}">{{__('index.services')}}</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('about')) active @endif"
-                       href="{{route('about')}}">{{__('index.about')}}</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('project')) active @endif"
-                       href="{{route('project')}}">{{__('index.project')}}</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('gallery')) active @endif"
-                       href="{{route('gallery')}}">{{__('index.gal')}}</a></li>
-                <li><a class="nav-link scrollto @if(Route::Is('contact')) active @endif"
-                       href="{{route('contact')}}">{{__('index.contact')}}</a></li>
-                <li class="dropdown"><a href="#"><span>{{__('index.Language')}}</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg></a>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('home')) active @endif" href="{{route('home')}}">
+                        {{__('index.navbar.home')}}
+                    </a>
+                </li>
+                <li><a class="nav-link scrollto @if(Route::Is('service')) active @endif" href="{{route('service')}}">
+                        {{__('index.navbar.services')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('about')) active @endif" href="{{route('about')}}">
+                        {{__('index.navbar.about')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('grant_projects')) active @endif" href="{{route('grant_projects')}}">
+                        {{__('index.navbar.grant_projects')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('project')) active @endif" href="{{route('project')}}">
+                        {{__('index.navbar.project')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">
+                        {{__('index.navbar.gal')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('contact')) active @endif"
+                       href="{{route('contact')}}">
+                        {{__('index.navbar.contact')}}
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">
+                        <span>{{__('index.navbar.Language')}}</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
                     <ul>
-                        <li><a href="locale/en">{{__('index.Inglis_tili')}}<img
-                                        src="{{ asset('assets/vendor/flag/uk.png') }}" width="30" height="30"/></a></li>
-                        <li><a href="locale/ru">{{__('index.Rus_tili')}}<img
-                                        src="{{ asset('assets/vendor/flag/russia.png') }}" width="30" height="30"/></a>
+                        <li>
+                            <a href="locale/en">
+                                {{__('index.navbar.Inglis_tili')}}
+                                <img src="{{ asset('assets/vendor/flag/uk.png') }}" width="30" height="30" alt="En flag"/>
+                            </a>
                         </li>
-                        <li><a href="locale/uz">{{__('index.Uzbek_tili')}}<img
-                                        src="{{ asset('assets/vendor/flag/uzb.png') }}" width="30" height="30"/></a>
+                        <li>
+                            <a href="locale/ru">{{__('index.navbar.Rus_tili')}}
+                                <img src="{{ asset('assets/vendor/flag/russia.png') }}" width="30" height="30" alt="Ru flag"/>
+                            </a>
+                        </li>
+                        <li><a href="locale/uz">
+                                {{__('index.navbar.Uzbek_tili')}}
+                                <img src="{{ asset('assets/vendor/flag/uzb.png') }}" width="30" height="30" alt="Uz flag"/>
+                            </a>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
+            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
     </div>
@@ -132,10 +163,11 @@
                     <div class="footer-info">
                         <h3>{{__('index.Day')}}</h3>
                         <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            {{__('index.navbar.address')}}:<br>
+                            {{__('index.navbar.address2')}}
+                            <br><br>
+                            <strong>{{__('index.navbar.phone')}}:</strong> +998 90 578 64 78<br>
+                            <strong>{{__('index.navbar.home')}}</strong> citronlab@gmail.com<br>
                         </p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -150,27 +182,26 @@
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('home')}}">{{__('index.home')}}</a>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="{{route('home')}}">{{__('index.navbar.home')}}</a>
                         </li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{route('about')}}">{{__('index.about')}}</a>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="{{route('about')}}">{{__('index.navbar.about')}}</a>
                         </li>
-                        <li><i class="bx bx-chevron-right"></i> <a
-                                    href="{{route('service')}}">{{__('index.services')}}</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a
-                                    href="{{route('project')}}">{{__('index.project')}}</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a
-                                    href="{{route('gallery')}}">{{__('index.gallery')}}</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="{{route('service')}}">{{__('index.navbar.services')}}</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="{{route('project')}}">{{__('index.navbar.project')}}</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="{{route('gallery')}}">{{__('index.navbar.gal')}}</a>
+                        </li>
                     </ul>
                 </div>
 

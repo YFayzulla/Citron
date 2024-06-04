@@ -10,6 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+    overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
@@ -189,7 +190,9 @@ h6 {
 .scrolled-offset {
   margin-top: 70px;
 }
-
+#logo_site{
+width:100px;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1085,6 +1088,10 @@ section {
 .team .member .social i {
   font-size: 18px;
   margin: 0 2px;
+}
+
+#about-img img{
+    width: 100%;
 }
 
 /*--------------------------------------------------------------

@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('name_uz');
             $table->string('name_ru');
             $table->string('name_en');
-            $table->string('desc_uz');
-            $table->string('desc_ru');
-            $table->string('desc_en');
+            $table->mediumText('desc_uz');
+            $table->mediumText('desc_ru');
+            $table->mediumText('desc_en');
             $table->string('image');
             $table->timestamps();
         });

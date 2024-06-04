@@ -23,7 +23,10 @@
                 >
                     Create Project
                 </h1>
-
+                @if($errors->any()) @dd($errors->all()) @endif
+                @foreach ($errors->all() as $error)
+                    <div>{{ $error }}</div>
+                @endforeach
                 <form method="post" action="{{route('projects.store')}}" enctype="multipart/form-data">
                     @csrf
                     <label class="block mt-1 text-sm">

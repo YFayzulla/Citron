@@ -6,9 +6,9 @@
         <div class="container">
 
             <div class="section-title">
-                <span>{{__('index.Project')}}</span>
-                <h2>{{__('index.Project')}}</h2>
-                <p>{{__('index.Completed_Project')}}</p>
+                <span>{{__('index.project.project')}}</span>
+                <h2>{{__('index.project.project')}}</h2>
+                <p>{{__('index.project.completed_project')}}</p>
             </div>
             {{--            @dd($users)--}}
 
@@ -34,7 +34,7 @@
                                             <p class="text-center mt-2">{{($project->{'desc_' . app()->getLocale()})}}</p>
                                         </div>
 
-                                        <h5>{{__('index.Loyixa_qatnashchilari')}}:
+                                        <h5>{{__('index.project.')}}:
                                             @foreach($project->project_has_user as $item)
                                                 <lf>
                                                     {{$item->user->name }}<?php echo ","." "?>
