@@ -8,6 +8,7 @@ use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\VisitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,8 +55,8 @@ Route::get('store', [IndexController::class, 'contact'])->name('contact');
 Route::post('store/store', [IndexController::class, 'store'])->name('contact.store');
 
 //admin panel
-
-//Route::get('/dashboard', function () {
+//
+//Route::get('/visit', function () {
 //    return view('admin.dashboard');
 //})->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -69,6 +70,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('projects', ProjectController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('/gallery', GalleryController::class);
+    Route::resource('/visit', VisitController::class);
 //    extra
     Route::get('/add_user/{id}', [IndexController::class, 'project_add_user'])->name('add_user');
     Route::get('/create_user/{id}', [IndexController::class, 'project_create_user'])->name('create_user');
