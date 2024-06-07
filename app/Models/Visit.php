@@ -11,7 +11,7 @@ class Visit extends Model
 
     public $timestamps = false;
 
-    protected $fillable=['country_uz','country_ru','country_en','university_uz_en','university_ru','date','description_uz','description_ru','description_en','photo'];
+    protected $fillable=['country_uz','country_ru','country_en','university_uz','university_en','university_ru','date','description_uz','description_ru','description_en','photo'];
 
 
 }

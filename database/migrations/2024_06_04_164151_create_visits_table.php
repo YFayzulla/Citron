@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('country_uz')->nullable();
             $table->string('country_ru')->nullable();
             $table->string('country_en')->nullable();
-            $table->string('university_uz_en')->nullable();
+            $table->string('university_uz')->nullable();
             $table->string('university_ru')->nullable();
+            $table->string('university_en')->nullable();
             $table->string('description_uz')->nullable();
             $table->string('description_ru')->nullable();
             $table->string('description_en')->nullable();

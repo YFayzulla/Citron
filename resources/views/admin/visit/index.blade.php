@@ -14,7 +14,7 @@
                         <div class="flex items-center">
                             <a href="{{route('visit.create')}}"
                                class="text-sm mb-8 justify-between items-center flex p-4 font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none font-shadow-outline-purple">
-                                Add About
+                                Add Visit
                             </a>
                         </div>
                     </div>
@@ -27,6 +27,7 @@
                             <th scope="col" class="px-4 py-3">Visited Data</th>
                             <th scope="col" class="px-4 py-3">Description</th>
                             <th scope="col" class="px-4 py-3">Photo</th>
+                            <th scope="col" class="px-4 py-3">Action</th>
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -37,7 +38,7 @@
                             <tr class="text-gray-700 dark:text-gray-400">
                                 <td class="px-4 py-3 text-sm">{{ $i++ }}</td>
                                 <td class="px-4 py-3 text-sm">{{$visit->country_en}}</td>
-                                <td class="px-4 py-3 text-sm">{{$visit->university_uz_en}}</td>
+                                <td class="px-4 py-3 text-sm">{{$visit->university_en}}</td>
                                 <td class="px-4 py-3 text-sm">{{$visit->date}}</td>
                                 <td class="px-4 py-3 text-sm">{{$visit->description_en}}</td>
                                 <td  class="px-4 py-3 text-sm">

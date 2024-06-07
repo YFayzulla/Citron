@@ -80,7 +80,7 @@ class VisitController extends Controller
             $file->move(public_path('photo'), $filename);
         }
         $visit->update($request->all());
-        $visit['photo'] = $filename;
+        $visit['photo'] = $filename ?? $visit->photo;
         $visit->save();
         return redirect()->route('visit.index');
     }
