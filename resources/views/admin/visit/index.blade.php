@@ -33,16 +33,15 @@
                         @php
                             $i = 1;
                         @endphp
-
                         @foreach($visits as $visit)
                             <tr class="text-gray-700 dark:text-gray-400">
                                 <td class="px-4 py-3 text-sm">{{ $i++ }}</td>
-                                <td class="px-4 py-3 text-sm">{{$visit->country}}</td>
-                                <td class="px-4 py-3 text-sm">{{$visit->university}}</td>
-                                <td class="px-4 py-3 text-sm">{{$visit->data}}</td>
-                                <td class="px-4 py-3 text-sm">{{$visit->description}}</td>
+                                <td class="px-4 py-3 text-sm">{{$visit->country_en}}</td>
+                                <td class="px-4 py-3 text-sm">{{$visit->university_uz_en}}</td>
+                                <td class="px-4 py-3 text-sm">{{$visit->date}}</td>
+                                <td class="px-4 py-3 text-sm">{{$visit->description_en}}</td>
                                 <td  class="px-4 py-3 text-sm">
-                                    <img src="Aphoto/{{$visit->photo}}" width="80px">
+                                    <img src="photo/{{$visit->photo}}" width="80px">
                                 </td>
                                 <td class="px-4 py-3">
                                     <div class="flex items-center space-x-4 text-sm">

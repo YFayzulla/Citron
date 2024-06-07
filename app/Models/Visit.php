@@ -9,7 +9,7 @@ class Visit extends Model
 {
     use HasFactory;
 
-    protected static $ignoreTimestampsOn;
+    public $timestamps = false;
 
     protected $fillable=['country_uz','country_ru','country_en','university_uz_en','university_ru','date','description_uz','description_ru','description_en','photo'];
 

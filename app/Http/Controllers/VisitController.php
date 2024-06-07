@@ -32,26 +32,20 @@ class VisitController extends Controller
     {
 
 
-        $file = $request->file('photo');
-        $uuid = Str::uuid()->toString();
-        $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('Aphoto'), $filename);
 
-        $visit = new Visit();
+        if ($request->hasfile('photo')) {
 
-        $visit['country_uz'] = $request['country_uz'];
-        $visit['country_ru'] = $request['country_ru'];
-        $visit['country_en'] = $request['country_en'];
-        $visit['description_uz'] = $request['description_uz'];
-        $visit['description_ru'] = $request['description_ru'];
-        $visit['description_en'] = $request['description_en'];
-        $visit['date'] = $request['date'];
+            $file = $request->file('photo');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('photo'), $filename);
+            $request['photo'] = $filename;
+
+        }
+
+
+        $visit = Visit::create($request->all());
         $visit['photo'] = $filename;
-        $visit['university_uz_en'] = $request['university_uz_en'];
-        $visit['university_ru'] = $request['university_ru'];
-
         $visit->save();
-
 
         return redirect()->route('visit.index');
 
@@ -62,7 +56,8 @@ class VisitController extends Controller
      */
     public function show(Visit $visit)
     {
-        //
+        $visits = Visit::all();
+        return view('visit', compact('visits'));
     }
 
     /**
@@ -70,7 +65,7 @@ class VisitController extends Controller
      */
     public function edit(Visit $visit)
     {
-        //
+        return view('admin.visit.edit', compact('visit'));
     }
 
     /**
@@ -78,7 +73,16 @@ class VisitController extends Controller
      */
     public function update(Request $request, Visit $visit)
     {
-        //
+        if ($request->hasfile('photo')) {
+            $file = $request->file('photo');
+            $uuid = Str::uuid()->toString();
+            $filename = $uuid . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('photo'), $filename);
+        }
+        $visit->update($request->all());
+        $visit['photo'] = $filename;
+        $visit->save();
+        return redirect()->route('visit.index');
     }
 
     /**
@@ -86,6 +90,7 @@ class VisitController extends Controller
      */
     public function destroy(Visit $visit)
     {
-        //
+        $visit->delete();
+        return redirect()->route('visit.index')->with('success', 'Visit deleted');
     }
 }
