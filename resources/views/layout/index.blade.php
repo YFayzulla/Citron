@@ -131,6 +131,32 @@
                         <span class="ml-4">Galleries</span>
                     </a>
                 </li>
+                <li class="relative px-6 py-3">
+                    <a
+                        class="@if(request()->routeIs('visit.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        href="{{route('visit.index')}}"
+                    >
+
+
+                        <svg
+                            class="w-5 h-5"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                d="M2.5 19.5l7-7 4 4 2 1 5-5-3-3 1-6-4 1-3 3-4-4-7 7v5l4 1-1 4H2.5z"
+                            />
+                        </svg>
+
+
+                        <span class="ml-4">Visit</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>
