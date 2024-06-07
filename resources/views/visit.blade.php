@@ -6,7 +6,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            /*background-color: #f5f5f5;*/
         }
 
         .container {
@@ -26,13 +26,13 @@
             margin-bottom: 10px;
         }
 
-        .create-section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+        /*.create-section h2 {*/
+        /*    font-size: 28px;*/
+        /*    margin-bottom: 20px;*/
+        /*}*/
 
         .create-section p, .create-section h3 {
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.5;
         }
 
@@ -58,24 +58,48 @@
     </style>
 
     <div class="section-title">
+
         <span>{{__('index.navbar.visit')}}</span>
-        <b>{{__('index.navbar.visit')}}</b>
+        <h2>{{__('index.navbar.visit')}}</h2>
         <p>{{__('index.navbar.visit')}}</p>
+
     </div>
 
+    @php
+        $count = 0;
+    @endphp
+
     @foreach($visits as $post)
-        <div class="container">
-            <div class="create-section">
-                <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
-                <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
-                <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
-            </div>
-            <div class="form-section">
-                <div class="form-card">
-                    <img src="photo/{{$post->photo}}" alt="Profile Picture">
+        @if($count % 2 == 0)
+            <div class="container">
+                <div class="create-section">
+                    <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
+                    <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
+                    <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
+                </div>
+                <div class="form-section">
+                    <div class="form-card">
+                        <img src="photo/{{$post->photo}}" alt="Profile Picture">
+                    </div>
                 </div>
             </div>
-        </div>
+        @else
+            <div class="container">
+                <div class="form-section">
+                    <div class="form-card">
+                        <img src="photo/{{$post->photo}}" alt="Profile Picture">
+                    </div>
+                </div>
+                <div class="create-section">
+                    <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
+                    <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
+                    <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
+                </div>
+            </div>
+        @endif
+        @php
+            $count++;
+        @endphp
     @endforeach
 
 @endsection
