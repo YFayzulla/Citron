@@ -110,6 +110,11 @@
                     </a>
                 </li>
                 <li>
+                    <a class="nav-link scrollto @if(Route::Is('visits')) active @endif" href="{{route('visits')}}">
+                        {{__('index.navbar.visit')}}
+                    </a>
+                </li>
+                <li>
                     <a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">
                         {{__('index.navbar.gal')}}
                     </a>
