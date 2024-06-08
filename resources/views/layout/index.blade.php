@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CiTron</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{  asset('admin/assets/css/tailwind.output.css')  }}" />
+    <link rel="stylesheet" href="{{  asset('admin/assets/css/tailwind.output.css')  }}"/>
     <script
         src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
         defer
@@ -44,11 +44,11 @@
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
               <span
-                  class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                  class=" @if(Route::Is('abouts.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                   aria-hidden="true"
               ></span>
                     <a
-                        class="@if(request()->routeIs('abouts.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                        class="inline-flex items-center w-full text-sm font-semibold  transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('abouts.index'))  dark:text-gray-100 @endif"
                         href="{{route('abouts.index')}}"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -62,8 +62,12 @@
             </ul>
             <ul>
                 <li class="relative px-6 py-3">
+                    <span
+                        class=" @if(Route::Is('projects.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
+
                     <a
-                        class="@if(request()->routeIs('projects.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('projects.index'))  dark:text-gray-100 @endif"
                         href="{{route('projects.index')}}"
                     >
                         <svg
@@ -84,8 +88,11 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
+                    <span
+                        class=" @if(Route::Is('services.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
                     <a
-                        class="@if(request()->routeIs('services.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('services.index'))  dark:text-gray-100 @endif"
                         href="{{route('services.index')}}"
                     >
                         <svg
@@ -106,8 +113,11 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
+                    <span
+                        class=" @if(Route::Is('contacts.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
                     <a
-                        class="@if(request()->routeIs('contacts.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('contacts.index'))  dark:text-gray-100 @endif"
                         href="{{route('contacts.index')}}"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -119,8 +129,11 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
+                    <span
+                        class=" @if(Route::Is('gallery.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
                     <a
-                        class="@if(request()->routeIs('gallery.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        class=" inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('gallery.index'))  dark:text-gray-100 @endif"
                         href="{{route('gallery.index')}}"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -132,8 +145,11 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
+                    <span
+                        class=" @if(Route::Is('visit.index')) absolute  @endif  inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
                     <a
-                        class="@if(request()->routeIs('visit.index'))  active  @endif inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        class=" inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 @if(Route::Is('visit.index'))  dark:text-gray-100 @endif"
                         href="{{route('visit.index')}}"
                     >
 
@@ -279,8 +295,8 @@
                                   d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
                         </svg>
                         <path
-                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                            ></path>
+                            d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                        ></path>
                         </svg>
                         <span class="ml-4">Galleries</span>
                     </a>
@@ -521,7 +537,8 @@
                                     <form method="POST" action="{{ route('logout') }}" class="w-full">
                                         @csrf
 
-                                        <a href="{{ route('logout') }}" class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                        <a href="{{ route('logout') }}"
+                                           class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                            onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                             <svg
@@ -562,3 +579,5 @@
 
 </body>
 </html>
+
+
