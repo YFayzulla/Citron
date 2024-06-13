@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
 use App\Models\Publication;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class PublicationController extends Controller
      */
     public function create()
     {
-        return view('admin.publication.create');
+        $author=Author::all();
+        return view('admin.publication.create',compact('author'));
     }
 
     /**
