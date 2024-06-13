@@ -48,7 +48,8 @@ class PublicationController extends Controller
      */
     public function edit(Publication $publication)
     {
-        return view('admin.publication.edit',compact('publication'));
+        $author=Author::all();
+        return view('admin.publication.edit',compact('publication','author'));
     }
 
     /**
