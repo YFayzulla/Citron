@@ -7,6 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\VisitController;
 use Illuminate\Support\Facades\Route;
@@ -72,6 +73,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('services', ServiceController::class);
     Route::resource('/gallery', GalleryController::class);
     Route::resource('/visit', VisitController::class);
+    Route::resource('/publication', PublicationController::class);
 //    extra
     Route::get('/add_user/{id}', [IndexController::class, 'project_add_user'])->name('add_user');
     Route::get('/create_user/{id}', [IndexController::class, 'project_create_user'])->name('create_user');
