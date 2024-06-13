@@ -21,8 +21,7 @@
                 <h1
                     class="mb-4 text-xl font-semib$publication text-gray-700 dark:text-gray-200"
                 >
-                    Visit About
-                </h1>
+                    Publication Edit
                 <form method="post" action="{{route('publication.update',$publication->id)}}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

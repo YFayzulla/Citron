@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
@@ -74,6 +75,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/gallery', GalleryController::class);
     Route::resource('/visit', VisitController::class);
     Route::resource('/publication', PublicationController::class);
+    Route::resource('/author', AuthorController::class);
 //    extra
     Route::get('/add_user/{id}', [IndexController::class, 'project_add_user'])->name('add_user');
     Route::get('/create_user/{id}', [IndexController::class, 'project_create_user'])->name('create_user');

@@ -21,37 +21,13 @@
                 <h1
                     class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
                 >
-                    Publication create
+                    Author create
                 </h1>
-                <form method="post" action="{{route('publication.store')}}" enctype="multipart/form-data">
+                <form method="post" action="{{route('author.store')}}" enctype="multipart/form-data">
                     @csrf
                     <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Name</span>
                         <input type="text" name="name" value="{{ old('name') }}"
-                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        />
-                    </label>
-                    <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Ex Name</span>
-                        <input type="text" name="ex_name" value="{{ old('ex_name') }}"
-                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        />
-                    </label>
-                    <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Author</span>
-                        <input type="text" name="author" value="{{ old('author') }}"
-                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        />
-                    </label>
-                    <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Date</span>
-                        <input type="date" name="date" value="{{ old('date') }}"
-                               class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        />
-                    </label>
-                    <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">File</span>
-                        <input type="file" name="file" value="{{ old('file') }}"
                                class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                         />
                     </label>
@@ -77,7 +53,7 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: '{{ $error }}',
-                    footer: '<a href="{{route('visit.create')}}">Why do I have this issue?</a>'
+                    footer: '<a href="{{route('author.create')}}">Why do I have this issue?</a>'
                 })
             </script>
         @endforeach

@@ -21,7 +21,7 @@
                 <h1
                     class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
                 >
-                    Visit About
+                    Visit create
                 </h1>
                 <form method="post" action="{{route('visit.store')}}" enctype="multipart/form-data">
                     @csrf
