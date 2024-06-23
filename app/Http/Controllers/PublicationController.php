@@ -45,9 +45,10 @@ class PublicationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Publication $publication)
+    public function show(Publication $publications)
     {
-        return view('publication',compact('publication'));
+        $publications= Publication::all();
+        return view('publication',compact('publications'));
     }
 
     /**
