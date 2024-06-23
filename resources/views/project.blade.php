@@ -12,6 +12,7 @@
             </div>
             {{--            @dd($users)--}}
 
+
             <div class="row">
                 @foreach($projects as $project)
 
@@ -21,6 +22,8 @@
                                 <img src="Aphoto/{{$project->image}}" class="img-thumbnail" alt="">
                             </center>
                         </button>
+
+
 
                         <!-- Modal -->
                         <div class="row">

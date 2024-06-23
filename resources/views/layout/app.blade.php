@@ -100,8 +100,8 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto @if(Route::Is('grant_projects')) active @endif" href="{{route('grant_projects')}}">
-                        {{__('index.navbar.grant_projects')}}
+                    <a class="nav-link scrollto @if(Route::Is('publication.vue')) active @endif" href="{{route('publication.vue')}}">
+                        {{__('index.navbar.Publication')}}
                     </a>
                 </li>
                 <li>
@@ -112,6 +112,11 @@
                 <li>
                     <a class="nav-link scrollto @if(Route::Is('visits')) active @endif" href="{{route('visits')}}">
                         {{__('index.navbar.visit')}}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto @if(Route::Is('gallery')) active @endif" href="{{route('gallery')}}">
+                        {{__('index.navbar.gal')}}
                     </a>
                 </li>
                 <li>
@@ -152,7 +157,6 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-
     </div>
 </header><!-- End Header -->
 

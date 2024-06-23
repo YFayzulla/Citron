@@ -18,6 +18,7 @@ return [
         'email' => "E-mail address",
         'address2' => "Хорезмская область, город Ургенч, улица Аль-Хорезми, 110",
         'visit'=>'Visit',
+        'Publication'=>'Publication',
     ],
 
     //Home

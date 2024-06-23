@@ -17,7 +17,8 @@ return [
         'address' => "Manzil",
         'email' => "Elektron manzil",
         'address2' => "Xorazm viloyati, Urganch shahri, Al-Xorazmiy ko'chasi, 110-uy",
-        'visit' => 'Sayohat'
+        'visit' => 'Sayohat',
+        'Publication' => 'Yangiliklar',
      ],
 
     //Home
