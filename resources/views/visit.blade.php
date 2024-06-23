@@ -6,18 +6,26 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /*background-color: #f5f5f5;*/
         }
 
-        .container {
+        /*.container {*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    padding: 50px;*/
+        /*}*/
+
+        .item {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 50px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
-        .create-section {
-            max-width: 45%;
+        .create-section, .form-section {
+            flex: 1;
+            margin: 10px;
+            max-width: calc(50% - 20px);
         }
 
         .create-section h1 {
@@ -26,28 +34,17 @@
             margin-bottom: 10px;
         }
 
-        /*.create-section h2 {*/
-        /*    font-size: 28px;*/
-        /*    margin-bottom: 20px;*/
-        /*}*/
-
         .create-section p, .create-section h3 {
             font-size: 20px;
             line-height: 1.5;
         }
 
         .form-section {
-            max-width: 45%;
             background-color: #fff;
             padding: 5px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-card {
             text-align: center;
-            overflow: hidden; /* Ensures the image fits within the rounded corners */
-            border-radius: 10px;
         }
 
         .form-card img {
@@ -55,51 +52,70 @@
             height: auto;
             border-radius: 10px;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .create-section, .form-section {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .create-section h1, .create-section h2, .create-section h3, .create-section p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .create-section h1, .create-section h2, .create-section h3, .create-section p {
+                font-size: 16px;
+            }
+        }
     </style>
 
     <div class="section-title">
-
         <span>{{__('index.navbar.visit')}}</span>
         <h2>{{__('index.navbar.visit')}}</h2>
         <p>{{__('index.navbar.visit')}}</p>
-
     </div>
 
-    @php
-        $count = 0;
-    @endphp
-
-    @foreach($visits as $post)
-        @if($count % 2 == 0)
-            <div class="container">
-                <div class="create-section">
-                    <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
-                    <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
-                    <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
-                </div>
-                <div class="form-section">
-                    <div class="form-card">
-                        <img src="photo/{{$post->photo}}" alt="Profile Picture">
-                    </div>
-                </div>
-            </div>
-        @else
-            <div class="container">
-                <div class="form-section">
-                    <div class="form-card">
-                        <img src="photo/{{$post->photo}}" alt="Profile Picture">
-                    </div>
-                </div>
-                <div class="create-section">
-                    <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
-                    <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
-                    <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
-                </div>
-            </div>
-        @endif
+    <div class="container">
         @php
-            $count++;
+            $count = 0;
         @endphp
-    @endforeach
+
+        @foreach($visits as $post)
+            <div class="item">
+                @if($count % 2 == 0)
+                    <div class="create-section">
+                        <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
+                        <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
+                        <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-card">
+                            <img src="photo/{{$post->photo}}" alt="Profile Picture">
+                        </div>
+                    </div>
+                @else
+                    <div class="form-section">
+                        <div class="form-card">
+                            <img src="photo/{{$post->photo}}" alt="Profile Picture">
+                        </div>
+                    </div>
+                    <div class="create-section">
+                        <h1>{{($post->{'country_' . app()->getLocale()})}}</h1>
+                        <h2>{{($post->{'university_' . app()->getLocale()})}}</h2>
+                        <h3>{{($post->{'description_' . app()->getLocale()})}}</h3>
+                    </div>
+                @endif
+            </div>
+            @php
+                $count++;
+            @endphp
+        @endforeach
+    </div>
 
 @endsection
