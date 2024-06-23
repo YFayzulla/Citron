@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use App\Models\Publication;
+use App\Service\UploadFileService;
 use Illuminate\Http\Request;
 
 class PublicationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $publications= Publication::all();
@@ -31,7 +30,15 @@ class PublicationController extends Controller
      */
     public function store(Request $request)
     {
-        Publication::create($request->all());
+        $pdfPath = UploadFileService::uploadFile($request->file('file'), 'files');
+        Publication::create([
+            'name'=>$request->name,
+            'author_id'=>$request->author_id,
+            'ex_name'=>$request->ex_name,
+            'date'=>$request->date,
+            'file'=>$pdfPath
+        ]);
+
         return redirect()->route('publication.index');
     }
 
@@ -40,7 +47,7 @@ class PublicationController extends Controller
      */
     public function show(Publication $publication)
     {
-        return view('admin.publication.show',compact('publication'));
+        return view('publication',compact('publication'));
     }
 
     /**

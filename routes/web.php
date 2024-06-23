@@ -47,6 +47,7 @@ Route::get('/portfolio', [GalleryController::class, 'show'])->name('gallery');
 Route::get('/about', [AboutController::class, 'show'])->name('about');
 Route::get('/grant-projects', [ProjectController::class, 'showGrants'])->name('grant_projects');
 Route::get('/project', [ProjectController::class, 'show'])->name('project');
+Route::get('/publications', [PublicationController::class, 'show'])->name('publication.vue');
 Route::get('/visits', [VisitController::class, 'show'])->name('visits');
 Route::get('/', [IndexController::class, 'index'])->name('home');
 

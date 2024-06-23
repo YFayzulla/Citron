@@ -34,10 +34,13 @@
                             <tr class="text-gray-700 dark:text-gray-400">
                                 <td class="px-4 py-3 text-sm">{{ $item->loop+1 }}</td>
                                 <td class="px-4 py-3 text-sm">{{$item->name}}</td>
-                                <td class="px-4 py-3 text-sm">{{$item->author}}</td>
+                                <td class="px-4 py-3 text-sm">{{$item->author->name}}</td>
                                 <td class="px-4 py-3 text-sm">{{$item->ex_name}}</td>
                                 <td class="px-4 py-3 text-sm">{{$item->date}}</td>
-
+                                <td>
+                                    <a href="{{ asset('storage/'. $item->file) }}" class="btn btn-primary mt-2">
+                                        <i class="bx bx-download me-2"></i> Faylni Yuklab Olish</a>
+                                </td>
                                 <td class="px-4 py-3">
                                     <div class="flex items-center space-x-4 text-sm">
                                         <a href="{{route('publication.edit',$item->id)}}"
@@ -48,7 +51,8 @@
                                                     d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                                             </svg>
                                         </a>
-                                        <form action="{{route('publication.destroy',$item->id)}}" method="post" id="form-delete">
+                                        <form action="{{route('publication.destroy',$item->id)}}" method="post"
+                                              id="form-delete">
                                             @csrf
                                             @method('DELETE')
                                             <button type="button"
